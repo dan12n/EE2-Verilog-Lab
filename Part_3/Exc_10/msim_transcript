@@ -1,0 +1,24 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# EX10_top_run_msim_rtl_verilog.do 
+# invalid command name "EX10_top_run_msim_rtl_verilog.do"
+do ./simulation/modelsim/tb_spi2dac.do
+# ** Error: (vish-4008) Object 'sysclk' not found.
+# Error in macro ././simulation/modelsim/tb_spi2dac.do line 8
+# ** Error: (vish-4008) Object 'sysclk' not found.
+# 
+#     while executing
+# "force sysclk 1 0, 0 10ns -r 20ns"
+do ./simulation/modelsim/tb_spi2dac.do
+# ** Error: (vish-4008) Object 'sysclk' not found.
+# Error in macro ././simulation/modelsim/tb_spi2dac.do line 8
+# ** Error: (vish-4008) Object 'sysclk' not found.
+# 
+#     while executing
+# "force sysclk 1 0, 0 10ns -r 20ns"
+do ./simulation/modelsim/tb_spi2dac.do
+# ** Error: (vish-4008) Object 'sysclk' not found.
+# Error in macro ././simulation/modelsim/tb_spi2dac.do line 8
+# ** Error: (vish-4008) Object 'sysclk' not found.
+# 
+#     while executing
+# "force sysclk 1 0, 0 10ns -r 20ns"

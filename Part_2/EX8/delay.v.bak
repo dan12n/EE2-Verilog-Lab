@@ -1,0 +1,19 @@
+module EX8_delay (N, clk, trigger, time_out)
+	input [6:0] N;
+	input clk;
+	input trigger;
+	reg [6:0] count;
+
+	initial time_out = 1'b0;
+
+	always @ (posedge clk)
+		if (trigger == 1'b1)
+			begin
+				if (count == N -1)
+					count <= 7'b0;
+					time_out = 1'b1;
+				else
+					count <= N + 1;
+			end
+
+endmodule

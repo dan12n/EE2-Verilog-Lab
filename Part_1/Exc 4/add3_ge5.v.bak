@@ -1,0 +1,10 @@
+module add3_ge5 (in, out); //W1 is input, and A1 is output
+	input [3:0] in;
+	output [3:0] out;
+
+	if (input >= 5)
+		output = input+3;
+	else
+		output = input;
+
+endmodule

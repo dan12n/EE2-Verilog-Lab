@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 d\\icnas2.cc.ic.ac.uk\dm2515\Digital 2\Part_3\Exc_10
+vspi2dac
+!i10b 1
+!s100 z[_IJzAK0f^:zHPDOV_KD0
+I=hae9eUo9ElLSMm5hf^9i0
+VFNOGDa=aYhJTn=76LYB@A2
+Z1 d\\icnas2.cc.ic.ac.uk\dm2515\Digital 2\Part_3\Exc_10
+w1478805578
+8//icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/Exc_10/spi2dac.v
+F//icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/Exc_10/spi2dac.v
+L0 9
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1480411590.108000
+!s107 //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/Exc_10/spi2dac.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/Exc_10|//icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/Exc_10/spi2dac.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work {+incdir+//icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/Exc_10} -O0

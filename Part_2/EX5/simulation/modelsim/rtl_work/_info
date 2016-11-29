@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\Digital 2\Part_2\EX5\simulation\modelsim
+vcounter_8
+!i10b 1
+!s100 D<<=W7B:n?g_o7H]>6mIm3
+IHJXVVi@jUE]ECAD6X6jTK2
+Vdn7aTnOzPKdeZA;zmQ`Cl3
+Z1 dH:\Digital 2\Part_2\EX5\simulation\modelsim
+w1479806315
+8//icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX5/counter_8.v
+F//icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX5/counter_8.v
+L0 4
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1479807660.438000
+!s107 //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX5/counter_8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX5|//icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX5/counter_8.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work {+incdir+//icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX5} -O0

@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "windows64",
+		"os_name" : "Windows 7",
+		"os_version" : "6.1"
+	},
+	"error" : {
+		"executable" : "quartus",
+		"comment" : "not_applicable",
+		"error_message" : "Access Violation at 0X000000005E150C4B",
+		"source_file" : "unknown",
+		"line" : "0",
+		"stack_trace" : "\t 0x5e150c4a: QtCore4 + 0x110c4a (?cast@QMetaObject@@QEBAPEBVQObject@@PEBV2@@Z + 0x1a)\n\t 0x52fc32ca: QtGui4 + 0x3a32ca (?eventFilter@QMdiArea@@MEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x6a)\n\t 0x5e14f742: QtCore4 + 0x10f742 (?sendThroughApplicationEventFilters@QCoreApplicationPrivate@@QEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x92)\n\t 0x52c42dbd: QtGui4 + 0x22dbd (?notify_helper@QApplicationPrivate@@QEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x1d)\n\t 0x52c42b2f: QtGui4 + 0x22b2f (?notify@QApplication@@UEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x17bf)\n\t 0x5e14d92b: QtCore4 + 0x10d92b (?notifyInternal@QCoreApplication@@AEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x7b)\n\t 0x52c3e182: QtGui4 + 0x1e182 (?enterModal@QApplicationPrivate@@SAXPEAVQWidget@@@Z + 0x172)\n\t 0x52c908c6: QtGui4 + 0x708c6 (?show_helper@QWidgetPrivate@@QEAAXXZ + 0x226)\n\t 0x52c8f478: QtGui4 + 0x6f478 (?setVisible@QWidget@@UEAAX_N@Z + 0x308)\n\t 0x5304432d: QtGui4 + 0x42432d (?setVisible@QDialog@@UEAAX_N@Z + 0xcd)\n\t 0x53043611: QtGui4 + 0x423611 (?exec@QDialog@@QEAAHXZ + 0xa1)\n\t0x7febb09df68: saui_dset + 0xdf68 (mdb_dyn_file_new_dlg + 0x48)\n\t0x7fee79d7623: SYS_QGQ + 0x7623 (?on_new_action@QGQ_MAIN_WINDOW@@MEAAXXZ + 0x83)\n\t0x7fed13c3612: SYS_QUI + 0x53612 (?qt_static_metacall@QUI_FRAME_WND@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z + 0x872)\n\t 0x5e15c420: QtCore4 + 0x11c420 (?activate@QMetaObject@@SAXPEAVQObject@@PEBU1@HPEAPEAX@Z + 0x520)\n\t 0x52c2a23f: QtGui4 + 0xa23f (?activate@QAction@@QEAAXW4ActionEvent@1@@Z + 0xdf)\n\t 0x52fd5c03: QtGui4 + 0x3b5c03 (?actionGeometry@QMenu@@QEBA?AVQRect@@PEAVQAction@@@Z + 0x443)\n\t 0x52fd5a95: QtGui4 + 0x3b5a95 (?actionGeometry@QMenu@@QEBA?AVQRect@@PEAVQAction@@@Z + 0x2d5)\n\t 0x52c80794: QtGui4 + 0x60794 (?event@QWidget@@MEAA_NPEAVQEvent@@@Z + 0xd4)\n\t 0x52fd6934: QtGui4 + 0x3b6934 (?event@QMenu@@MEAA_NPEAVQEvent@@@Z + 0x284)\n\t 0x52c42e95: QtGui4 + 0x22e95 (?notify_helper@QApplicationPrivate@@QEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0xf5)\n\t 0x52c41a8e: QtGui4 + 0x21a8e (?notify@QApplication@@UEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x71e)\n\t 0x5e14d92b: QtCore4 + 0x10d92b (?notifyInternal@QCoreApplication@@AEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x7b)\n\t 0x52c45cfe: QtGui4 + 0x25cfe (?sendMouseEvent@QApplicationPrivate@@SA_NPEAVQWidget@@PEAVQMouseEvent@@00PEAPEAV2@AEAV?$QPointer@VQWidget@@@@_N@Z + 0x1de)\n\t 0x52ca5366: QtGui4 + 0x85366 (?trUtf8@QScrollBar@@SA?AVQString@@PEBD0H@Z + 0x10b6)\n\t 0x52ca90b1: QtGui4 + 0x890b1 (?winMouseButtonUp@QApplication@@SAXXZ + 0x2761)\n\t 0x76b59bdc: USER32 + 0x19bdc (TranslateMessageEx + 0x29c)\n\t 0x76b598e1: USER32 + 0x198e1 (TranslateMessage + 0x1e1)\n\t 0x5e172802: QtCore4 + 0x132802 (?processEvents@QEventDispatcherWin32@@UEAA_NV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x3e2)\n\t 0x52ca0eb4: QtGui4 + 0x80eb4 (?openPopup@QApplicationPrivate@@QEAAXPEAVQWidget@@@Z + 0x204)\n\t 0x5e14a88b: QtCore4 + 0x10a88b (?exec@QEventLoop@@QEAAHV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x22b)\n\t 0x5e14ce6f: QtCore4 + 0x10ce6f (?exec@QCoreApplication@@SAHXZ + 0xdf)\n\t0x13f9b197b: quartus + 0x197b (?qgq_main@@YAHHPEAPEBD@Z + 0x7b)\n\t0x7fee72e2928: CCL_MSG + 0x12928 (?msg_main_thread@@YAPEAXPEAX@Z + 0x18)\n\t0x7fee72e3f4e: CCL_MSG + 0x13f4e (?msg_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x6e)\n\t0x7feeaf74240: ccl_mem + 0x14240 (?mem_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x70)\n\t0x7fee72e2011: CCL_MSG + 0x12011 (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0xa1)\n\t0x13f9b24e7: quartus + 0x24e7 (WinMain + 0x127)\n\t0x13f9b1e58: quartus + 0x1e58 (__tmainCRTStartup + 0x148)\n\t 0x76c559cc: kernel32 + 0x159cc (BaseThreadInitThunk + 0xc)\n\t 0x76d8a560: ntdll + 0x2a560 (RtlUserThreadStart + 0x20)\n",
+		"subsystem" : "unknown"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "16.0.0",
+		"build" : "211",
+		"edition" : "Standard Edition"
+	}
+}

@@ -1,0 +1,231 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# EX5_top_run_msim_rtl_verilog.do 
+# invalid command name "EX5_top_run_msim_rtl_verilog.do"
+cd {H:/Digital 2/Part_2/EX5/simulation/modelsim}
+EX5_top_run_msim_rtl_verilog.do
+# invalid command name "EX5_top_run_msim_rtl_verilog.do"
+# Load canceled
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+
+vlog -vlog01compat -work work +incdir+//icnas2.cc.ic.ac.uk/dm2515/Digital\ 2/Part_2/EX5 {//icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX5/counter_8.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter_8
+# 
+# Top level modules:
+# 	counter_8
+
+
+vsim work.counter_8
+# vsim work.counter_8 
+# Loading work.counter_8
+add wave clock enable
+# (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+add wave -hexadecimal count
+add wave clock
+# (vish-4014) No objects found matching 'clock'.
+add wave -position insertpoint  \
+sim:/counter_8/clock
+add wave -position insertpoint  \
+sim:/counter_8/enable
+force enable 1
+# ** Error: (vish-4008) Object 'enable' not found.
+# 
+add wave clock
+# (vish-4014) No objects found matching 'clock'.
+add wave -position insertpoint  \
+sim:/counter_8/enable
+add wave /counter_8/enable
+add wave /counter_8/enable
+add wave /counter_8/clock
+force /counter_8/enable 1
+run 100ns
+force /counter_8/clock 0 0, 1 10ns -repeat 20ns
+run 100ns
+restart
+clear
+# invalid command name "clear"
+do ./tb_counter.do
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step -over
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -over
+step -over
+step -over
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -current
+step -current
+step -current
+step -current
+step -current
+step -current
+step -current
+step -over -current
+step -over -current
+step -over -current
+step -over -current
+step -over -current
+step -over -current
+step -over -current
+step -out -current
+step -out -current
+step -out -current
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {H:/Digital 2/Part_2/EX5/simulation/modelsim/wave.do}
