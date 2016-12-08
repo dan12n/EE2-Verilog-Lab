@@ -1,5 +1,5 @@
 Flow report for ex19_top
-Wed Dec 07 17:28:43 2016
+Thu Dec 08 15:07:38 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Wed Dec 07 17:28:43 2016           ;
+; Flow Status                     ; Successful - Thu Dec 08 15:07:38 2016           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; ex19_top                                        ;
 ; Top-level Entity Name           ; ex19_top                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 122 / 32,070 ( < 1 % )                          ;
-; Total registers                 ; 138                                             ;
+; Logic utilization (in ALMs)     ; 121 / 32,070 ( < 1 % )                          ;
+; Total registers                 ; 143                                             ;
 ; Total pins                      ; 41 / 457 ( 9 % )                                ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 65,536 / 4,065,280 ( 2 % )                      ;
+; Total block memory bits         ; 73,728 / 4,065,280 ( 2 % )                      ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/07/2016 17:27:20 ;
+; Start date & time ; 12/08/2016 15:05:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ex19_top            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 260248564297246.148113164007392       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 48549626809766.148120955507008        ; --            ; --          ; --         ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
@@ -99,12 +99,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 937 MB              ; 00:00:23                           ;
-; Fitter                    ; 00:00:40     ; 1.0                     ; 2763 MB             ; 00:01:07                           ;
-; Assembler                 ; 00:00:08     ; 1.0                     ; 898 MB              ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:09     ; 1.1                     ; 1247 MB             ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 815 MB              ; 00:00:02                           ;
-; Total                     ; 00:01:12     ; --                      ; --                  ; 00:01:45                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 917 MB              ; 00:00:27                           ;
+; Fitter                    ; 00:00:49     ; 1.0                     ; 2746 MB             ; 00:01:21                           ;
+; Assembler                 ; 00:00:12     ; 1.0                     ; 897 MB              ; 00:00:08                           ;
+; TimeQuest Timing Analyzer ; 00:00:12     ; 1.1                     ; 1245 MB             ; 00:00:09                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 813 MB              ; 00:00:02                           ;
+; Total                     ; 00:01:31     ; --                      ; --                  ; 00:02:07                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,11 +113,11 @@ agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; eews104a-022     ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; eews104a-022     ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; eews104a-022     ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; eews104a-022     ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; eews104a-022     ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; eews305-070      ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; eews305-070      ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; eews305-070      ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; eews305-070      ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer        ; eews305-070      ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
