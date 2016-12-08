@@ -27,3 +27,5 @@ Info (10281): Verilog HDL Declaration information at b_to_bcd.v(22): object "a26
 Info (10281): Verilog HDL Declaration information at b_to_bcd.v(22): object "a27" differs only in case from object "A27" in the same scope File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/b_to_bcd.v Line: 22
 Info (10281): Verilog HDL Declaration information at b_to_bcd.v(22): object "a28" differs only in case from object "A28" in the same scope File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/b_to_bcd.v Line: 22
 Info (10281): Verilog HDL Declaration information at b_to_bcd.v(22): object "a29" differs only in case from object "A29" in the same scope File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/b_to_bcd.v Line: 22
+Info (10281): Verilog HDL Declaration information at ex15_top.v(4): object "ADC_CS" differs only in case from object "adc_cs" in the same scope File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 4
+Info (10281): Verilog HDL Declaration information at ex15_top.v(4): object "ADC_SCK" differs only in case from object "adc_sck" in the same scope File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 4

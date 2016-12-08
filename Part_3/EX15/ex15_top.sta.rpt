@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for ex15_top
-Wed Dec 07 15:52:01 2016
+Thu Dec 08 16:19:36 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -98,14 +98,14 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.10        ;
+; Average used               ; 1.04        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.3%      ;
-;     Processor 3            ;   3.2%      ;
-;     Processor 4            ;   3.1%      ;
+;     Processor 2            ;   1.4%      ;
+;     Processor 3            ;   1.4%      ;
+;     Processor 4            ;   1.3%      ;
 +----------------------------+-------------+
 
 
@@ -115,22 +115,22 @@ agreement for further details.
 ; Clock Name                   ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                          ;
 +------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------+
 ; CLOCK_50                     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }                     ;
-; divider_5000:comb_10|out_clk ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divider_5000:comb_10|out_clk } ;
+; divider_5000:comb_11|out_clk ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divider_5000:comb_11|out_clk } ;
 ; spi2adc:comb_3|clk_1MHz      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { spi2adc:comb_3|clk_1MHz }      ;
-; spi2dac:comb_14|clk_1MHz     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { spi2dac:comb_14|clk_1MHz }     ;
+; spi2dac:comb_15|clk_1MHz     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { spi2dac:comb_15|clk_1MHz }     ;
 +------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------+
 
 
-+--------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                                 ;
-+------------+-----------------+------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                   ; Note ;
-+------------+-----------------+------------------------------+------+
-; 195.01 MHz ; 195.01 MHz      ; spi2adc:comb_3|clk_1MHz      ;      ;
-; 264.06 MHz ; 264.06 MHz      ; spi2dac:comb_14|clk_1MHz     ;      ;
-; 270.12 MHz ; 270.12 MHz      ; CLOCK_50                     ;      ;
-; 285.88 MHz ; 285.88 MHz      ; divider_5000:comb_10|out_clk ;      ;
-+------------+-----------------+------------------------------+------+
++--------------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                                                           ;
++------------+-----------------+------------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                   ; Note                                           ;
++------------+-----------------+------------------------------+------------------------------------------------+
+; 283.53 MHz ; 283.53 MHz      ; spi2dac:comb_15|clk_1MHz     ;                                                ;
+; 330.47 MHz ; 330.47 MHz      ; CLOCK_50                     ;                                                ;
+; 407.5 MHz  ; 407.5 MHz       ; spi2adc:comb_3|clk_1MHz      ;                                                ;
+; 532.2 MHz  ; 420.17 MHz      ; divider_5000:comb_11|out_clk ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -145,23 +145,23 @@ HTML report is unavailable in plain text report export.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; spi2dac:comb_14|clk_1MHz     ; -3.830 ; -61.453       ;
-; spi2adc:comb_3|clk_1MHz      ; -3.505 ; -52.235       ;
-; CLOCK_50                     ; -3.454 ; -120.766      ;
-; divider_5000:comb_10|out_clk ; -2.548 ; -53.889       ;
+; spi2dac:comb_15|clk_1MHz     ; -4.374 ; -65.548       ;
+; spi2adc:comb_3|clk_1MHz      ; -3.652 ; -19.177       ;
+; CLOCK_50                     ; -3.383 ; -113.198      ;
+; divider_5000:comb_11|out_clk ; -0.879 ; -8.596        ;
 +------------------------------+--------+---------------+
 
 
-+------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                   ;
-+------------------------------+-------+---------------+
-; Clock                        ; Slack ; End Point TNS ;
-+------------------------------+-------+---------------+
-; spi2adc:comb_3|clk_1MHz      ; 0.167 ; 0.000         ;
-; spi2dac:comb_14|clk_1MHz     ; 0.291 ; 0.000         ;
-; CLOCK_50                     ; 0.400 ; 0.000         ;
-; divider_5000:comb_10|out_clk ; 0.721 ; 0.000         ;
-+------------------------------+-------+---------------+
++-------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                    ;
++------------------------------+--------+---------------+
+; Clock                        ; Slack  ; End Point TNS ;
++------------------------------+--------+---------------+
+; CLOCK_50                     ; -0.843 ; -1.682        ;
+; spi2dac:comb_15|clk_1MHz     ; 0.328  ; 0.000         ;
+; divider_5000:comb_11|out_clk ; 0.636  ; 0.000         ;
+; spi2adc:comb_3|clk_1MHz      ; 0.811  ; 0.000         ;
++------------------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -181,30 +181,29 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; divider_5000:comb_10|out_clk ; -2.174 ; -73.773       ;
-; CLOCK_50                     ; -0.669 ; -40.984       ;
-; spi2adc:comb_3|clk_1MHz      ; -0.394 ; -18.068       ;
-; spi2dac:comb_14|clk_1MHz     ; -0.394 ; -11.016       ;
+; divider_5000:comb_11|out_clk ; -1.380 ; -20.150       ;
+; CLOCK_50                     ; -0.735 ; -41.194       ;
+; spi2dac:comb_15|clk_1MHz     ; -0.394 ; -10.229       ;
+; spi2adc:comb_3|clk_1MHz      ; -0.394 ; -5.442        ;
 +------------------------------+--------+---------------+
 
 
 -----------------------------------------------
 ; Slow 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-Design MTBF is not calculated because the design doesn't meet its timing requirements.
+No synchronizer chains to report.
 
 
-
-+--------------------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                                  ;
-+------------+-----------------+------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                   ; Note ;
-+------------+-----------------+------------------------------+------+
-; 206.19 MHz ; 206.19 MHz      ; spi2adc:comb_3|clk_1MHz      ;      ;
-; 253.23 MHz ; 253.23 MHz      ; CLOCK_50                     ;      ;
-; 273.52 MHz ; 273.52 MHz      ; spi2dac:comb_14|clk_1MHz     ;      ;
-; 279.72 MHz ; 279.72 MHz      ; divider_5000:comb_10|out_clk ;      ;
-+------------+-----------------+------------------------------+------+
++--------------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                                                            ;
++------------+-----------------+------------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                   ; Note                                           ;
++------------+-----------------+------------------------------+------------------------------------------------+
+; 292.06 MHz ; 292.06 MHz      ; spi2dac:comb_15|clk_1MHz     ;                                                ;
+; 306.65 MHz ; 306.65 MHz      ; CLOCK_50                     ;                                                ;
+; 404.04 MHz ; 404.04 MHz      ; spi2adc:comb_3|clk_1MHz      ;                                                ;
+; 535.05 MHz ; 420.17 MHz      ; divider_5000:comb_11|out_clk ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -213,23 +212,23 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; spi2dac:comb_14|clk_1MHz     ; -3.976 ; -62.835       ;
-; spi2adc:comb_3|clk_1MHz      ; -3.626 ; -51.198       ;
-; CLOCK_50                     ; -3.182 ; -115.867      ;
-; divider_5000:comb_10|out_clk ; -2.609 ; -52.825       ;
+; spi2dac:comb_15|clk_1MHz     ; -4.367 ; -66.327       ;
+; spi2adc:comb_3|clk_1MHz      ; -3.757 ; -19.598       ;
+; CLOCK_50                     ; -3.133 ; -108.148      ;
+; divider_5000:comb_11|out_clk ; -0.869 ; -8.523        ;
 +------------------------------+--------+---------------+
 
 
-+------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                    ;
-+------------------------------+-------+---------------+
-; Clock                        ; Slack ; End Point TNS ;
-+------------------------------+-------+---------------+
-; spi2adc:comb_3|clk_1MHz      ; 0.202 ; 0.000         ;
-; CLOCK_50                     ; 0.230 ; 0.000         ;
-; spi2dac:comb_14|clk_1MHz     ; 0.306 ; 0.000         ;
-; divider_5000:comb_10|out_clk ; 0.751 ; 0.000         ;
-+------------------------------+-------+---------------+
++-------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                     ;
++------------------------------+--------+---------------+
+; Clock                        ; Slack  ; End Point TNS ;
++------------------------------+--------+---------------+
+; CLOCK_50                     ; -1.118 ; -2.229        ;
+; spi2dac:comb_15|clk_1MHz     ; 0.331  ; 0.000         ;
+; divider_5000:comb_11|out_clk ; 0.667  ; 0.000         ;
+; spi2adc:comb_3|clk_1MHz      ; 0.770  ; 0.000         ;
++------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -249,18 +248,17 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; divider_5000:comb_10|out_clk ; -2.174 ; -73.598       ;
-; CLOCK_50                     ; -0.727 ; -37.591       ;
-; spi2adc:comb_3|clk_1MHz      ; -0.394 ; -17.704       ;
-; spi2dac:comb_14|clk_1MHz     ; -0.394 ; -10.836       ;
+; divider_5000:comb_11|out_clk ; -1.380 ; -20.067       ;
+; CLOCK_50                     ; -0.762 ; -38.235       ;
+; spi2dac:comb_15|clk_1MHz     ; -0.394 ; -10.326       ;
+; spi2adc:comb_3|clk_1MHz      ; -0.394 ; -5.348        ;
 +------------------------------+--------+---------------+
 
 
 ----------------------------------------------
 ; Slow 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-Design MTBF is not calculated because the design doesn't meet its timing requirements.
-
+No synchronizer chains to report.
 
 
 +-------------------------------------------------------+
@@ -268,23 +266,23 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50                     ; -2.829 ; -68.535       ;
-; spi2dac:comb_14|clk_1MHz     ; -1.759 ; -28.140       ;
-; spi2adc:comb_3|clk_1MHz      ; -1.639 ; -25.451       ;
-; divider_5000:comb_10|out_clk ; -1.210 ; -24.668       ;
+; CLOCK_50                     ; -2.832 ; -64.905       ;
+; spi2dac:comb_15|clk_1MHz     ; -2.097 ; -30.101       ;
+; spi2adc:comb_3|clk_1MHz      ; -1.677 ; -7.985        ;
+; divider_5000:comb_11|out_clk ; -0.260 ; -2.418        ;
 +------------------------------+--------+---------------+
 
 
-+------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                   ;
-+------------------------------+-------+---------------+
-; Clock                        ; Slack ; End Point TNS ;
-+------------------------------+-------+---------------+
-; spi2dac:comb_14|clk_1MHz     ; 0.080 ; 0.000         ;
-; spi2adc:comb_3|clk_1MHz      ; 0.174 ; 0.000         ;
-; CLOCK_50                     ; 0.193 ; 0.000         ;
-; divider_5000:comb_10|out_clk ; 0.308 ; 0.000         ;
-+------------------------------+-------+---------------+
++-------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                    ;
++------------------------------+--------+---------------+
+; Clock                        ; Slack  ; End Point TNS ;
++------------------------------+--------+---------------+
+; CLOCK_50                     ; -0.469 ; -0.926        ;
+; spi2dac:comb_15|clk_1MHz     ; 0.066  ; 0.000         ;
+; divider_5000:comb_11|out_clk ; 0.306  ; 0.000         ;
+; spi2adc:comb_3|clk_1MHz      ; 0.350  ; 0.000         ;
++------------------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -304,18 +302,17 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; divider_5000:comb_10|out_clk ; -2.174 ; -68.190       ;
-; CLOCK_50                     ; -0.794 ; -29.117       ;
-; spi2adc:comb_3|clk_1MHz      ; -0.001 ; -0.005        ;
-; spi2dac:comb_14|clk_1MHz     ; 0.134  ; 0.000         ;
+; divider_5000:comb_11|out_clk ; -1.380 ; -19.602       ;
+; CLOCK_50                     ; -0.817 ; -29.275       ;
+; spi2adc:comb_3|clk_1MHz      ; 0.074  ; 0.000         ;
+; spi2dac:comb_15|clk_1MHz     ; 0.131  ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
 -----------------------------------------------
 ; Fast 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-Design MTBF is not calculated because the design doesn't meet its timing requirements.
-
+No synchronizer chains to report.
 
 
 +-------------------------------------------------------+
@@ -323,23 +320,23 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50                     ; -2.322 ; -55.947       ;
-; spi2dac:comb_14|clk_1MHz     ; -1.698 ; -25.968       ;
-; spi2adc:comb_3|clk_1MHz      ; -1.582 ; -22.944       ;
-; divider_5000:comb_10|out_clk ; -1.078 ; -21.327       ;
+; CLOCK_50                     ; -2.291 ; -52.679       ;
+; spi2dac:comb_15|clk_1MHz     ; -1.968 ; -28.306       ;
+; spi2adc:comb_3|clk_1MHz      ; -1.609 ; -7.356        ;
+; divider_5000:comb_11|out_clk ; -0.198 ; -1.823        ;
 +------------------------------+--------+---------------+
 
 
-+------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                    ;
-+------------------------------+-------+---------------+
-; Clock                        ; Slack ; End Point TNS ;
-+------------------------------+-------+---------------+
-; spi2dac:comb_14|clk_1MHz     ; 0.057 ; 0.000         ;
-; spi2adc:comb_3|clk_1MHz      ; 0.166 ; 0.000         ;
-; CLOCK_50                     ; 0.184 ; 0.000         ;
-; divider_5000:comb_10|out_clk ; 0.256 ; 0.000         ;
-+------------------------------+-------+---------------+
++-------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                     ;
++------------------------------+--------+---------------+
+; Clock                        ; Slack  ; End Point TNS ;
++------------------------------+--------+---------------+
+; CLOCK_50                     ; -0.633 ; -1.252        ;
+; spi2dac:comb_15|clk_1MHz     ; 0.032  ; 0.000         ;
+; divider_5000:comb_11|out_clk ; 0.290  ; 0.000         ;
+; spi2adc:comb_3|clk_1MHz      ; 0.317  ; 0.000         ;
++------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -359,36 +356,35 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; divider_5000:comb_10|out_clk ; -2.174 ; -68.090       ;
-; CLOCK_50                     ; -0.841 ; -34.252       ;
-; spi2adc:comb_3|clk_1MHz      ; 0.030  ; 0.000         ;
-; spi2dac:comb_14|clk_1MHz     ; 0.148  ; 0.000         ;
+; divider_5000:comb_11|out_clk ; -1.380 ; -19.522       ;
+; CLOCK_50                     ; -0.843 ; -34.450       ;
+; spi2adc:comb_3|clk_1MHz      ; 0.097  ; 0.000         ;
+; spi2dac:comb_15|clk_1MHz     ; 0.129  ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
 ----------------------------------------------
 ; Fast 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-Design MTBF is not calculated because the design doesn't meet its timing requirements.
+No synchronizer chains to report.
 
 
-
-+---------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                         ;
-+-------------------------------+----------+-------+----------+---------+---------------------+
-; Clock                         ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+-------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack              ; -3.976   ; 0.057 ; N/A      ; N/A     ; -2.174              ;
-;  CLOCK_50                     ; -3.454   ; 0.184 ; N/A      ; N/A     ; -0.841              ;
-;  divider_5000:comb_10|out_clk ; -2.609   ; 0.256 ; N/A      ; N/A     ; -2.174              ;
-;  spi2adc:comb_3|clk_1MHz      ; -3.626   ; 0.166 ; N/A      ; N/A     ; -0.394              ;
-;  spi2dac:comb_14|clk_1MHz     ; -3.976   ; 0.057 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS               ; -288.343 ; 0.0   ; 0.0      ; 0.0     ; -143.841            ;
-;  CLOCK_50                     ; -120.766 ; 0.000 ; N/A      ; N/A     ; -40.984             ;
-;  divider_5000:comb_10|out_clk ; -53.889  ; 0.000 ; N/A      ; N/A     ; -73.773             ;
-;  spi2adc:comb_3|clk_1MHz      ; -52.235  ; 0.000 ; N/A      ; N/A     ; -18.068             ;
-;  spi2dac:comb_14|clk_1MHz     ; -62.835  ; 0.000 ; N/A      ; N/A     ; -11.016             ;
-+-------------------------------+----------+-------+----------+---------+---------------------+
++----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                          ;
++-------------------------------+----------+--------+----------+---------+---------------------+
+; Clock                         ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack              ; -4.374   ; -1.118 ; N/A      ; N/A     ; -1.380              ;
+;  CLOCK_50                     ; -3.383   ; -1.118 ; N/A      ; N/A     ; -0.843              ;
+;  divider_5000:comb_11|out_clk ; -0.879   ; 0.290  ; N/A      ; N/A     ; -1.380              ;
+;  spi2adc:comb_3|clk_1MHz      ; -3.757   ; 0.317  ; N/A      ; N/A     ; -0.394              ;
+;  spi2dac:comb_15|clk_1MHz     ; -4.374   ; 0.032  ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS               ; -206.519 ; -2.229 ; 0.0      ; 0.0     ; -77.015             ;
+;  CLOCK_50                     ; -113.198 ; -2.229 ; N/A      ; N/A     ; -41.194             ;
+;  divider_5000:comb_11|out_clk ; -8.596   ; 0.000  ; N/A      ; N/A     ; -20.150             ;
+;  spi2adc:comb_3|clk_1MHz      ; -19.598  ; 0.000  ; N/A      ; N/A     ; -5.442              ;
+;  spi2dac:comb_15|clk_1MHz     ; -66.327  ; 0.000  ; N/A      ; N/A     ; -10.326             ;
++-------------------------------+----------+--------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -400,7 +396,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; DAC_SDI ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; DAC_LD  ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; DAC_SCK ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; pwm_out ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; PWM_OUT ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX0[0] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX0[1] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX0[2] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -429,6 +425,17 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; HEX3[4] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX3[5] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX3[6] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX4[0] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX4[1] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX4[2] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX4[3] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX4[4] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX4[5] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX4[6] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ADC_SDI ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ADC_CS  ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ADC_SCK ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ADC_SDO ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +---------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
@@ -450,7 +457,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; DAC_SDI ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.258 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.258 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; DAC_LD  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.258 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.258 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; DAC_SCK ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
-; pwm_out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; PWM_OUT ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.258 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.258 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; HEX0[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.258 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.258 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; HEX0[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.258 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.258 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; HEX0[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.257 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.257 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
@@ -479,6 +486,17 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; HEX3[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.258 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.258 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; HEX3[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.62e-07 V                   ; 3.1 V               ; -0.153 V            ; 0.035 V                              ; 0.31 V                               ; 4.23e-10 s                  ; 1.59e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.62e-07 V                  ; 3.1 V              ; -0.153 V           ; 0.035 V                             ; 0.31 V                              ; 4.23e-10 s                 ; 1.59e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
+; HEX4[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
+; HEX4[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
+; HEX4[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.62e-07 V                   ; 3.1 V               ; -0.153 V            ; 0.035 V                              ; 0.31 V                               ; 4.23e-10 s                  ; 1.59e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.62e-07 V                  ; 3.1 V              ; -0.153 V           ; 0.035 V                             ; 0.31 V                              ; 4.23e-10 s                 ; 1.59e-10 s                 ; Yes                       ; No                        ;
+; HEX4[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.62e-07 V                   ; 3.1 V               ; -0.153 V            ; 0.035 V                              ; 0.31 V                               ; 4.23e-10 s                  ; 1.59e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.62e-07 V                  ; 3.1 V              ; -0.153 V           ; 0.035 V                             ; 0.31 V                              ; 4.23e-10 s                 ; 1.59e-10 s                 ; Yes                       ; No                        ;
+; HEX4[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.62e-07 V                   ; 3.1 V               ; -0.153 V            ; 0.035 V                              ; 0.31 V                               ; 4.23e-10 s                  ; 1.59e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.62e-07 V                  ; 3.1 V              ; -0.153 V           ; 0.035 V                             ; 0.31 V                              ; 4.23e-10 s                 ; 1.59e-10 s                 ; Yes                       ; No                        ;
+; HEX4[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
+; HEX4[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
+; ADC_SDI ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
+; ADC_CS  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.62e-07 V                   ; 3.1 V               ; -0.153 V            ; 0.035 V                              ; 0.31 V                               ; 4.23e-10 s                  ; 1.59e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.62e-07 V                  ; 3.1 V              ; -0.153 V           ; 0.035 V                             ; 0.31 V                              ; 4.23e-10 s                 ; 1.59e-10 s                 ; Yes                       ; No                        ;
+; ADC_SCK ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.62e-07 V                   ; 3.1 V               ; -0.153 V            ; 0.035 V                              ; 0.31 V                               ; 4.23e-10 s                  ; 1.59e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.62e-07 V                  ; 3.1 V              ; -0.153 V           ; 0.035 V                             ; 0.31 V                              ; 4.23e-10 s                 ; 1.59e-10 s                 ; Yes                       ; No                        ;
+; ADC_SDO ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.257 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.257 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -491,7 +509,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; DAC_SDI ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.133 V            ; 0.025 V                              ; 0.169 V                              ; 4.92e-10 s                  ; 3.13e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.133 V           ; 0.025 V                             ; 0.169 V                             ; 4.92e-10 s                 ; 3.13e-10 s                 ; Yes                       ; No                        ;
 ; DAC_LD  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.133 V            ; 0.025 V                              ; 0.169 V                              ; 4.92e-10 s                  ; 3.13e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.133 V           ; 0.025 V                             ; 0.169 V                             ; 4.92e-10 s                 ; 3.13e-10 s                 ; Yes                       ; No                        ;
 ; DAC_SCK ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
-; pwm_out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; PWM_OUT ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.133 V            ; 0.025 V                              ; 0.169 V                              ; 4.92e-10 s                  ; 3.13e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.133 V           ; 0.025 V                             ; 0.169 V                             ; 4.92e-10 s                 ; 3.13e-10 s                 ; Yes                       ; No                        ;
 ; HEX0[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.133 V            ; 0.025 V                              ; 0.169 V                              ; 4.92e-10 s                  ; 3.13e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.133 V           ; 0.025 V                             ; 0.169 V                             ; 4.92e-10 s                 ; 3.13e-10 s                 ; Yes                       ; No                        ;
 ; HEX0[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.133 V            ; 0.025 V                              ; 0.169 V                              ; 4.92e-10 s                  ; 3.13e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.133 V           ; 0.025 V                             ; 0.169 V                             ; 4.92e-10 s                 ; 3.13e-10 s                 ; Yes                       ; No                        ;
 ; HEX0[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.136 V            ; 0.025 V                              ; 0.167 V                              ; 4.92e-10 s                  ; 3.12e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.136 V           ; 0.025 V                             ; 0.167 V                             ; 4.92e-10 s                 ; 3.12e-10 s                 ; Yes                       ; No                        ;
@@ -520,6 +538,17 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; HEX3[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.133 V            ; 0.025 V                              ; 0.169 V                              ; 4.92e-10 s                  ; 3.13e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.133 V           ; 0.025 V                             ; 0.169 V                             ; 4.92e-10 s                 ; 3.13e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.61e-05 V                   ; 3.09 V              ; -0.0638 V           ; 0.034 V                              ; 0.099 V                              ; 5.12e-10 s                  ; 2.97e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.61e-05 V                  ; 3.09 V             ; -0.0638 V          ; 0.034 V                             ; 0.099 V                             ; 5.12e-10 s                 ; 2.97e-10 s                 ; Yes                       ; Yes                       ;
 ; HEX3[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
+; HEX4[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
+; HEX4[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
+; HEX4[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.61e-05 V                   ; 3.09 V              ; -0.0638 V           ; 0.034 V                              ; 0.099 V                              ; 5.12e-10 s                  ; 2.97e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.61e-05 V                  ; 3.09 V             ; -0.0638 V          ; 0.034 V                             ; 0.099 V                             ; 5.12e-10 s                 ; 2.97e-10 s                 ; Yes                       ; Yes                       ;
+; HEX4[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.61e-05 V                   ; 3.09 V              ; -0.0638 V           ; 0.034 V                              ; 0.099 V                              ; 5.12e-10 s                  ; 2.97e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.61e-05 V                  ; 3.09 V             ; -0.0638 V          ; 0.034 V                             ; 0.099 V                             ; 5.12e-10 s                 ; 2.97e-10 s                 ; Yes                       ; Yes                       ;
+; HEX4[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.61e-05 V                   ; 3.09 V              ; -0.0638 V           ; 0.034 V                              ; 0.099 V                              ; 5.12e-10 s                  ; 2.97e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.61e-05 V                  ; 3.09 V             ; -0.0638 V          ; 0.034 V                             ; 0.099 V                             ; 5.12e-10 s                 ; 2.97e-10 s                 ; Yes                       ; Yes                       ;
+; HEX4[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
+; HEX4[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
+; ADC_SDI ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
+; ADC_CS  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.61e-05 V                   ; 3.09 V              ; -0.0638 V           ; 0.034 V                              ; 0.099 V                              ; 5.12e-10 s                  ; 2.97e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.61e-05 V                  ; 3.09 V             ; -0.0638 V          ; 0.034 V                             ; 0.099 V                             ; 5.12e-10 s                 ; 2.97e-10 s                 ; Yes                       ; Yes                       ;
+; ADC_SCK ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.61e-05 V                   ; 3.09 V              ; -0.0638 V           ; 0.034 V                              ; 0.099 V                              ; 5.12e-10 s                  ; 2.97e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.61e-05 V                  ; 3.09 V             ; -0.0638 V          ; 0.034 V                             ; 0.099 V                             ; 5.12e-10 s                 ; 2.97e-10 s                 ; Yes                       ; Yes                       ;
+; ADC_SDO ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.136 V            ; 0.025 V                              ; 0.167 V                              ; 4.92e-10 s                  ; 3.12e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.136 V           ; 0.025 V                             ; 0.167 V                             ; 4.92e-10 s                 ; 3.12e-10 s                 ; Yes                       ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -532,7 +561,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; DAC_SDI ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; DAC_LD  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; DAC_SCK ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
-; pwm_out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; PWM_OUT ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; HEX0[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; HEX0[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; HEX0[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.621 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.621 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
@@ -561,6 +590,17 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; HEX3[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.63e-06 V                   ; 3.64 V              ; -0.326 V            ; 0.091 V                              ; 0.479 V                              ; 3.83e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 3.63e-06 V                  ; 3.64 V             ; -0.326 V           ; 0.091 V                             ; 0.479 V                             ; 3.83e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; HEX3[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
+; HEX4[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
+; HEX4[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
+; HEX4[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.63e-06 V                   ; 3.64 V              ; -0.326 V            ; 0.091 V                              ; 0.479 V                              ; 3.83e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 3.63e-06 V                  ; 3.64 V             ; -0.326 V           ; 0.091 V                             ; 0.479 V                             ; 3.83e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
+; HEX4[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.63e-06 V                   ; 3.64 V              ; -0.326 V            ; 0.091 V                              ; 0.479 V                              ; 3.83e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 3.63e-06 V                  ; 3.64 V             ; -0.326 V           ; 0.091 V                             ; 0.479 V                             ; 3.83e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
+; HEX4[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.63e-06 V                   ; 3.64 V              ; -0.326 V            ; 0.091 V                              ; 0.479 V                              ; 3.83e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 3.63e-06 V                  ; 3.64 V             ; -0.326 V           ; 0.091 V                             ; 0.479 V                             ; 3.83e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
+; HEX4[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
+; HEX4[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
+; ADC_SDI ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
+; ADC_CS  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.63e-06 V                   ; 3.64 V              ; -0.326 V            ; 0.091 V                              ; 0.479 V                              ; 3.83e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 3.63e-06 V                  ; 3.64 V             ; -0.326 V           ; 0.091 V                             ; 0.479 V                             ; 3.83e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
+; ADC_SCK ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.63e-06 V                   ; 3.64 V              ; -0.326 V            ; 0.091 V                              ; 0.479 V                              ; 3.83e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 3.63e-06 V                  ; 3.64 V             ; -0.326 V           ; 0.091 V                             ; 0.479 V                             ; 3.83e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
+; ADC_SDO ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.621 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.621 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -573,7 +613,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; DAC_SDI ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; DAC_LD  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; DAC_SCK ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
-; pwm_out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; PWM_OUT ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; HEX0[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; HEX0[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; HEX0[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.319 V            ; 0.041 V                              ; 0.528 V                              ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.319 V           ; 0.041 V                             ; 0.528 V                             ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
@@ -602,6 +642,17 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; HEX3[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000184 V                   ; 3.64 V              ; -0.19 V             ; 0.019 V                              ; 0.425 V                              ; 4.44e-10 s                  ; 1.91e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000184 V                  ; 3.64 V             ; -0.19 V            ; 0.019 V                             ; 0.425 V                             ; 4.44e-10 s                 ; 1.91e-10 s                 ; Yes                       ; No                        ;
 ; HEX3[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
+; HEX4[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
+; HEX4[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
+; HEX4[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000184 V                   ; 3.64 V              ; -0.19 V             ; 0.019 V                              ; 0.425 V                              ; 4.44e-10 s                  ; 1.91e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000184 V                  ; 3.64 V             ; -0.19 V            ; 0.019 V                             ; 0.425 V                             ; 4.44e-10 s                 ; 1.91e-10 s                 ; Yes                       ; No                        ;
+; HEX4[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000184 V                   ; 3.64 V              ; -0.19 V             ; 0.019 V                              ; 0.425 V                              ; 4.44e-10 s                  ; 1.91e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000184 V                  ; 3.64 V             ; -0.19 V            ; 0.019 V                             ; 0.425 V                             ; 4.44e-10 s                 ; 1.91e-10 s                 ; Yes                       ; No                        ;
+; HEX4[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000184 V                   ; 3.64 V              ; -0.19 V             ; 0.019 V                              ; 0.425 V                              ; 4.44e-10 s                  ; 1.91e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000184 V                  ; 3.64 V             ; -0.19 V            ; 0.019 V                             ; 0.425 V                             ; 4.44e-10 s                 ; 1.91e-10 s                 ; Yes                       ; No                        ;
+; HEX4[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
+; HEX4[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
+; ADC_SDI ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
+; ADC_CS  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000184 V                   ; 3.64 V              ; -0.19 V             ; 0.019 V                              ; 0.425 V                              ; 4.44e-10 s                  ; 1.91e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000184 V                  ; 3.64 V             ; -0.19 V            ; 0.019 V                             ; 0.425 V                             ; 4.44e-10 s                 ; 1.91e-10 s                 ; Yes                       ; No                        ;
+; ADC_SCK ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000184 V                   ; 3.64 V              ; -0.19 V             ; 0.019 V                              ; 0.425 V                              ; 4.44e-10 s                  ; 1.91e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000184 V                  ; 3.64 V             ; -0.19 V            ; 0.019 V                             ; 0.425 V                             ; 4.44e-10 s                 ; 1.91e-10 s                 ; Yes                       ; No                        ;
+; ADC_SDO ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.319 V            ; 0.041 V                              ; 0.528 V                              ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.319 V           ; 0.041 V                             ; 0.528 V                             ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -610,17 +661,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------+------------------------------+----------+----------+----------+----------+
 ; From Clock                   ; To Clock                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
-; CLOCK_50                     ; CLOCK_50                     ; 549      ; 0        ; 0        ; 0        ;
-; divider_5000:comb_10|out_clk ; CLOCK_50                     ; 25       ; 15       ; 0        ; 0        ;
+; CLOCK_50                     ; CLOCK_50                     ; 551      ; 0        ; 0        ; 0        ;
+; divider_5000:comb_11|out_clk ; CLOCK_50                     ; 25       ; 15       ; 0        ; 0        ;
 ; spi2adc:comb_3|clk_1MHz      ; CLOCK_50                     ; 5        ; 1        ; 0        ; 0        ;
-; spi2dac:comb_14|clk_1MHz     ; CLOCK_50                     ; 16       ; 1        ; 0        ; 0        ;
-; divider_5000:comb_10|out_clk ; divider_5000:comb_10|out_clk ; 75       ; 0        ; 0        ; 0        ;
-; spi2adc:comb_3|clk_1MHz      ; divider_5000:comb_10|out_clk ; 55       ; 0        ; 0        ; 0        ;
+; spi2dac:comb_15|clk_1MHz     ; CLOCK_50                     ; 16       ; 1        ; 0        ; 0        ;
+; divider_5000:comb_11|out_clk ; divider_5000:comb_11|out_clk ; 10       ; 0        ; 0        ; 0        ;
 ; CLOCK_50                     ; spi2adc:comb_3|clk_1MHz      ; 3        ; 0        ; 0        ; 0        ;
-; spi2adc:comb_3|clk_1MHz      ; spi2adc:comb_3|clk_1MHz      ; 58       ; 10       ; 21       ; 9        ;
-; CLOCK_50                     ; spi2dac:comb_14|clk_1MHz     ; 15       ; 0        ; 0        ; 0        ;
-; divider_5000:comb_10|out_clk ; spi2dac:comb_14|clk_1MHz     ; 10       ; 0        ; 0        ; 0        ;
-; spi2dac:comb_14|clk_1MHz     ; spi2dac:comb_14|clk_1MHz     ; 113      ; 0        ; 0        ; 0        ;
+; spi2adc:comb_3|clk_1MHz      ; spi2adc:comb_3|clk_1MHz      ; 39       ; 0        ; 0        ; 0        ;
+; CLOCK_50                     ; spi2dac:comb_15|clk_1MHz     ; 15       ; 0        ; 0        ; 0        ;
+; divider_5000:comb_11|out_clk ; spi2dac:comb_15|clk_1MHz     ; 10       ; 0        ; 0        ; 0        ;
+; spi2dac:comb_15|clk_1MHz     ; spi2dac:comb_15|clk_1MHz     ; 108      ; 0        ; 0        ; 0        ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -630,17 +680,16 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------+------------------------------+----------+----------+----------+----------+
 ; From Clock                   ; To Clock                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
-; CLOCK_50                     ; CLOCK_50                     ; 549      ; 0        ; 0        ; 0        ;
-; divider_5000:comb_10|out_clk ; CLOCK_50                     ; 25       ; 15       ; 0        ; 0        ;
+; CLOCK_50                     ; CLOCK_50                     ; 551      ; 0        ; 0        ; 0        ;
+; divider_5000:comb_11|out_clk ; CLOCK_50                     ; 25       ; 15       ; 0        ; 0        ;
 ; spi2adc:comb_3|clk_1MHz      ; CLOCK_50                     ; 5        ; 1        ; 0        ; 0        ;
-; spi2dac:comb_14|clk_1MHz     ; CLOCK_50                     ; 16       ; 1        ; 0        ; 0        ;
-; divider_5000:comb_10|out_clk ; divider_5000:comb_10|out_clk ; 75       ; 0        ; 0        ; 0        ;
-; spi2adc:comb_3|clk_1MHz      ; divider_5000:comb_10|out_clk ; 55       ; 0        ; 0        ; 0        ;
+; spi2dac:comb_15|clk_1MHz     ; CLOCK_50                     ; 16       ; 1        ; 0        ; 0        ;
+; divider_5000:comb_11|out_clk ; divider_5000:comb_11|out_clk ; 10       ; 0        ; 0        ; 0        ;
 ; CLOCK_50                     ; spi2adc:comb_3|clk_1MHz      ; 3        ; 0        ; 0        ; 0        ;
-; spi2adc:comb_3|clk_1MHz      ; spi2adc:comb_3|clk_1MHz      ; 58       ; 10       ; 21       ; 9        ;
-; CLOCK_50                     ; spi2dac:comb_14|clk_1MHz     ; 15       ; 0        ; 0        ; 0        ;
-; divider_5000:comb_10|out_clk ; spi2dac:comb_14|clk_1MHz     ; 10       ; 0        ; 0        ; 0        ;
-; spi2dac:comb_14|clk_1MHz     ; spi2dac:comb_14|clk_1MHz     ; 113      ; 0        ; 0        ; 0        ;
+; spi2adc:comb_3|clk_1MHz      ; spi2adc:comb_3|clk_1MHz      ; 39       ; 0        ; 0        ; 0        ;
+; CLOCK_50                     ; spi2dac:comb_15|clk_1MHz     ; 15       ; 0        ; 0        ; 0        ;
+; divider_5000:comb_11|out_clk ; spi2dac:comb_15|clk_1MHz     ; 10       ; 0        ; 0        ; 0        ;
+; spi2dac:comb_15|clk_1MHz     ; spi2dac:comb_15|clk_1MHz     ; 108      ; 0        ; 0        ; 0        ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -666,8 +715,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 33    ; 33   ;
-; Unconstrained Output Port Paths ; 298   ; 298  ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 22    ; 22   ;
 +---------------------------------+-------+------+
 
 
@@ -677,9 +726,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Target                       ; Clock                        ; Type ; Status      ;
 +------------------------------+------------------------------+------+-------------+
 ; CLOCK_50                     ; CLOCK_50                     ; Base ; Constrained ;
-; divider_5000:comb_10|out_clk ; divider_5000:comb_10|out_clk ; Base ; Constrained ;
+; divider_5000:comb_11|out_clk ; divider_5000:comb_11|out_clk ; Base ; Constrained ;
 ; spi2adc:comb_3|clk_1MHz      ; spi2adc:comb_3|clk_1MHz      ; Base ; Constrained ;
-; spi2dac:comb_14|clk_1MHz     ; spi2dac:comb_14|clk_1MHz     ; Base ; Constrained ;
+; spi2dac:comb_15|clk_1MHz     ; spi2dac:comb_15|clk_1MHz     ; Base ; Constrained ;
 +------------------------------+------------------------------+------+-------------+
 
 
@@ -688,39 +737,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; ADC_CS      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADC_SCK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADC_SDI     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DAC_CS      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DAC_LD      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DAC_SCK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DAC_SDI     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; pwm_out     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PWM_OUT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -729,39 +753,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; ADC_CS      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADC_SCK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADC_SDI     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DAC_CS      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DAC_LD      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DAC_SCK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DAC_SDI     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; pwm_out     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PWM_OUT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -771,7 +770,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Wed Dec 07 15:51:53 2016
+    Info: Processing started: Thu Dec 08 16:19:22 2016
 Info: Command: quartus_sta ex15_top -c ex15_top
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -781,138 +780,130 @@ Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ex15_top.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name spi2adc:comb_3|clk_1MHz spi2adc:comb_3|clk_1MHz
     Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
-    Info (332105): create_clock -period 1.000 -name divider_5000:comb_10|out_clk divider_5000:comb_10|out_clk
-    Info (332105): create_clock -period 1.000 -name spi2dac:comb_14|clk_1MHz spi2dac:comb_14|clk_1MHz
+    Info (332105): create_clock -period 1.000 -name spi2dac:comb_15|clk_1MHz spi2dac:comb_15|clk_1MHz
+    Info (332105): create_clock -period 1.000 -name divider_5000:comb_11|out_clk divider_5000:comb_11|out_clk
+    Info (332105): create_clock -period 1.000 -name spi2adc:comb_3|clk_1MHz spi2adc:comb_3|clk_1MHz
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.830
+Info (332146): Worst-case setup slack is -4.374
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.830             -61.453 spi2dac:comb_14|clk_1MHz 
-    Info (332119):    -3.505             -52.235 spi2adc:comb_3|clk_1MHz 
-    Info (332119):    -3.454            -120.766 CLOCK_50 
-    Info (332119):    -2.548             -53.889 divider_5000:comb_10|out_clk 
-Info (332146): Worst-case hold slack is 0.167
+    Info (332119):    -4.374             -65.548 spi2dac:comb_15|clk_1MHz 
+    Info (332119):    -3.652             -19.177 spi2adc:comb_3|clk_1MHz 
+    Info (332119):    -3.383            -113.198 CLOCK_50 
+    Info (332119):    -0.879              -8.596 divider_5000:comb_11|out_clk 
+Info (332146): Worst-case hold slack is -0.843
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.167               0.000 spi2adc:comb_3|clk_1MHz 
-    Info (332119):     0.291               0.000 spi2dac:comb_14|clk_1MHz 
-    Info (332119):     0.400               0.000 CLOCK_50 
-    Info (332119):     0.721               0.000 divider_5000:comb_10|out_clk 
+    Info (332119):    -0.843              -1.682 CLOCK_50 
+    Info (332119):     0.328               0.000 spi2dac:comb_15|clk_1MHz 
+    Info (332119):     0.636               0.000 divider_5000:comb_11|out_clk 
+    Info (332119):     0.811               0.000 spi2adc:comb_3|clk_1MHz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.174
+Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -73.773 divider_5000:comb_10|out_clk 
-    Info (332119):    -0.669             -40.984 CLOCK_50 
-    Info (332119):    -0.394             -18.068 spi2adc:comb_3|clk_1MHz 
-    Info (332119):    -0.394             -11.016 spi2dac:comb_14|clk_1MHz 
-Info (332114): Report Metastability: Found 1 synchronizer chains.
-    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+    Info (332119):    -1.380             -20.150 divider_5000:comb_11|out_clk 
+    Info (332119):    -0.735             -41.194 CLOCK_50 
+    Info (332119):    -0.394             -10.229 spi2dac:comb_15|clk_1MHz 
+    Info (332119):    -0.394              -5.442 spi2adc:comb_3|clk_1MHz 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.976
+Info (332146): Worst-case setup slack is -4.367
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.976             -62.835 spi2dac:comb_14|clk_1MHz 
-    Info (332119):    -3.626             -51.198 spi2adc:comb_3|clk_1MHz 
-    Info (332119):    -3.182            -115.867 CLOCK_50 
-    Info (332119):    -2.609             -52.825 divider_5000:comb_10|out_clk 
-Info (332146): Worst-case hold slack is 0.202
+    Info (332119):    -4.367             -66.327 spi2dac:comb_15|clk_1MHz 
+    Info (332119):    -3.757             -19.598 spi2adc:comb_3|clk_1MHz 
+    Info (332119):    -3.133            -108.148 CLOCK_50 
+    Info (332119):    -0.869              -8.523 divider_5000:comb_11|out_clk 
+Info (332146): Worst-case hold slack is -1.118
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.202               0.000 spi2adc:comb_3|clk_1MHz 
-    Info (332119):     0.230               0.000 CLOCK_50 
-    Info (332119):     0.306               0.000 spi2dac:comb_14|clk_1MHz 
-    Info (332119):     0.751               0.000 divider_5000:comb_10|out_clk 
+    Info (332119):    -1.118              -2.229 CLOCK_50 
+    Info (332119):     0.331               0.000 spi2dac:comb_15|clk_1MHz 
+    Info (332119):     0.667               0.000 divider_5000:comb_11|out_clk 
+    Info (332119):     0.770               0.000 spi2adc:comb_3|clk_1MHz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.174
+Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -73.598 divider_5000:comb_10|out_clk 
-    Info (332119):    -0.727             -37.591 CLOCK_50 
-    Info (332119):    -0.394             -17.704 spi2adc:comb_3|clk_1MHz 
-    Info (332119):    -0.394             -10.836 spi2dac:comb_14|clk_1MHz 
-Info (332114): Report Metastability: Found 1 synchronizer chains.
-    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+    Info (332119):    -1.380             -20.067 divider_5000:comb_11|out_clk 
+    Info (332119):    -0.762             -38.235 CLOCK_50 
+    Info (332119):    -0.394             -10.326 spi2dac:comb_15|clk_1MHz 
+    Info (332119):    -0.394              -5.348 spi2adc:comb_3|clk_1MHz 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.829
+Info (332146): Worst-case setup slack is -2.832
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.829             -68.535 CLOCK_50 
-    Info (332119):    -1.759             -28.140 spi2dac:comb_14|clk_1MHz 
-    Info (332119):    -1.639             -25.451 spi2adc:comb_3|clk_1MHz 
-    Info (332119):    -1.210             -24.668 divider_5000:comb_10|out_clk 
-Info (332146): Worst-case hold slack is 0.080
+    Info (332119):    -2.832             -64.905 CLOCK_50 
+    Info (332119):    -2.097             -30.101 spi2dac:comb_15|clk_1MHz 
+    Info (332119):    -1.677              -7.985 spi2adc:comb_3|clk_1MHz 
+    Info (332119):    -0.260              -2.418 divider_5000:comb_11|out_clk 
+Info (332146): Worst-case hold slack is -0.469
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.080               0.000 spi2dac:comb_14|clk_1MHz 
-    Info (332119):     0.174               0.000 spi2adc:comb_3|clk_1MHz 
-    Info (332119):     0.193               0.000 CLOCK_50 
-    Info (332119):     0.308               0.000 divider_5000:comb_10|out_clk 
+    Info (332119):    -0.469              -0.926 CLOCK_50 
+    Info (332119):     0.066               0.000 spi2dac:comb_15|clk_1MHz 
+    Info (332119):     0.306               0.000 divider_5000:comb_11|out_clk 
+    Info (332119):     0.350               0.000 spi2adc:comb_3|clk_1MHz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.174
+Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -68.190 divider_5000:comb_10|out_clk 
-    Info (332119):    -0.794             -29.117 CLOCK_50 
-    Info (332119):    -0.001              -0.005 spi2adc:comb_3|clk_1MHz 
-    Info (332119):     0.134               0.000 spi2dac:comb_14|clk_1MHz 
-Info (332114): Report Metastability: Found 1 synchronizer chains.
-    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+    Info (332119):    -1.380             -19.602 divider_5000:comb_11|out_clk 
+    Info (332119):    -0.817             -29.275 CLOCK_50 
+    Info (332119):     0.074               0.000 spi2adc:comb_3|clk_1MHz 
+    Info (332119):     0.131               0.000 spi2dac:comb_15|clk_1MHz 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.322
+Info (332146): Worst-case setup slack is -2.291
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.322             -55.947 CLOCK_50 
-    Info (332119):    -1.698             -25.968 spi2dac:comb_14|clk_1MHz 
-    Info (332119):    -1.582             -22.944 spi2adc:comb_3|clk_1MHz 
-    Info (332119):    -1.078             -21.327 divider_5000:comb_10|out_clk 
-Info (332146): Worst-case hold slack is 0.057
+    Info (332119):    -2.291             -52.679 CLOCK_50 
+    Info (332119):    -1.968             -28.306 spi2dac:comb_15|clk_1MHz 
+    Info (332119):    -1.609              -7.356 spi2adc:comb_3|clk_1MHz 
+    Info (332119):    -0.198              -1.823 divider_5000:comb_11|out_clk 
+Info (332146): Worst-case hold slack is -0.633
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.057               0.000 spi2dac:comb_14|clk_1MHz 
-    Info (332119):     0.166               0.000 spi2adc:comb_3|clk_1MHz 
-    Info (332119):     0.184               0.000 CLOCK_50 
-    Info (332119):     0.256               0.000 divider_5000:comb_10|out_clk 
+    Info (332119):    -0.633              -1.252 CLOCK_50 
+    Info (332119):     0.032               0.000 spi2dac:comb_15|clk_1MHz 
+    Info (332119):     0.290               0.000 divider_5000:comb_11|out_clk 
+    Info (332119):     0.317               0.000 spi2adc:comb_3|clk_1MHz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.174
+Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -68.090 divider_5000:comb_10|out_clk 
-    Info (332119):    -0.841             -34.252 CLOCK_50 
-    Info (332119):     0.030               0.000 spi2adc:comb_3|clk_1MHz 
-    Info (332119):     0.148               0.000 spi2dac:comb_14|clk_1MHz 
-Info (332114): Report Metastability: Found 1 synchronizer chains.
-    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+    Info (332119):    -1.380             -19.522 divider_5000:comb_11|out_clk 
+    Info (332119):    -0.843             -34.450 CLOCK_50 
+    Info (332119):     0.097               0.000 spi2adc:comb_3|clk_1MHz 
+    Info (332119):     0.129               0.000 spi2dac:comb_15|clk_1MHz 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1244 megabytes
-    Info: Processing ended: Wed Dec 07 15:52:01 2016
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 1442 megabytes
+    Info: Processing ended: Thu Dec 08 16:19:36 2016
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:10
 
 

@@ -1,10 +1,10 @@
 |ex15_top
 CLOCK_50 => CLOCK_50.IN4
-DAC_CS <= spi2dac:comb_14.port4
-DAC_SDI <= spi2dac:comb_14.port3
-DAC_LD <= spi2dac:comb_14.port6
-DAC_SCK <= spi2dac:comb_14.port5
-pwm_out <= pwm:comb_15.port3
+DAC_CS <= spi2dac:comb_15.port4
+DAC_SDI <= spi2dac:comb_15.port3
+DAC_LD <= spi2dac:comb_15.port6
+DAC_SCK <= spi2dac:comb_15.port5
+PWM_OUT <= pwm:comb_16.port3
 HEX0[0] <= dec_to_7seg:comb_6.port1
 HEX0[1] <= dec_to_7seg:comb_6.port1
 HEX0[2] <= dec_to_7seg:comb_6.port1
@@ -33,6 +33,17 @@ HEX3[3] <= dec_to_7seg:comb_9.port1
 HEX3[4] <= dec_to_7seg:comb_9.port1
 HEX3[5] <= dec_to_7seg:comb_9.port1
 HEX3[6] <= dec_to_7seg:comb_9.port1
+HEX4[0] <= dec_to_7seg:comb_10.port1
+HEX4[1] <= dec_to_7seg:comb_10.port1
+HEX4[2] <= dec_to_7seg:comb_10.port1
+HEX4[3] <= dec_to_7seg:comb_10.port1
+HEX4[4] <= dec_to_7seg:comb_10.port1
+HEX4[5] <= dec_to_7seg:comb_10.port1
+HEX4[6] <= dec_to_7seg:comb_10.port1
+ADC_SDI <= spi2adc:comb_3.port5
+ADC_CS <= spi2adc:comb_3.port6
+ADC_SCK <= spi2adc:comb_3.port7
+ADC_SDO <= spi2adc:comb_3.port8
 
 
 |ex15_top|spi2adc:comb_3
@@ -1623,7 +1634,21 @@ out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ex15_top|divider_5000:comb_10
+|ex15_top|dec_to_7seg:comb_10
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex15_top|divider_5000:comb_11
 clk => count[0].CLK
 clk => count[1].CLK
 clk => count[2].CLK
@@ -1644,7 +1669,7 @@ clk => out_clk~reg0.CLK
 out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ex15_top|async_adder:comb_11
+|ex15_top|async_adder:comb_12
 A[0] => Add0.IN10
 A[1] => Add0.IN9
 A[2] => Add0.IN8
@@ -1677,7 +1702,7 @@ out[8] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 out[9] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ex15_top|d_register:comb_12
+|ex15_top|d_register:comb_13
 D[0] => Q[0]~reg0.DATAIN
 D[1] => Q[1]~reg0.DATAIN
 D[2] => Q[2]~reg0.DATAIN
@@ -1710,7 +1735,7 @@ Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ex15_top|ROM:comb_13
+|ex15_top|ROM:comb_14
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -1734,7 +1759,7 @@ q[8] <= altsyncram:altsyncram_component.q_a
 q[9] <= altsyncram:altsyncram_component.q_a
 
 
-|ex15_top|ROM:comb_13|altsyncram:altsyncram_component
+|ex15_top|ROM:comb_14|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -1789,7 +1814,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|ex15_top|ROM:comb_13|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated
+|ex15_top|ROM:comb_14|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -1912,7 +1937,7 @@ q_a[8] <= ram_block1a8.PORTADATAOUT
 q_a[9] <= ram_block1a9.PORTADATAOUT
 
 
-|ex15_top|spi2dac:comb_14
+|ex15_top|spi2dac:comb_15
 sysclk => clk_1MHz.CLK
 sysclk => ctr[0].CLK
 sysclk => ctr[1].CLK
@@ -1939,7 +1964,7 @@ dac_sck <= dac_sck.DB_MAX_OUTPUT_PORT_TYPE
 dac_ld <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ex15_top|pwm:comb_15
+|ex15_top|pwm:comb_16
 clk => pwm_out~reg0.CLK
 clk => count[0].CLK
 clk => count[1].CLK

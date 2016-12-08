@@ -1,7 +1,7 @@
-module ex14_top (CLOCK_50, SW, DAC_CS, DAC_SDI, DAC_LD, DAC_SCK, pwm_out, HEX0, HEX1, HEX2, HEX3);
+module ex14_top (CLOCK_50, SW, DAC_CS, DAC_SDI, DAC_LD, DAC_SCK, PWM_OUT, HEX0, HEX1, HEX2, HEX3);
 	input CLOCK_50;
 	input [9:0] SW;
-	output DAC_CS, DAC_SDI, DAC_LD, DAC_SCK, pwm_out;
+	output DAC_CS, DAC_SDI, DAC_LD, DAC_SCK, PWM_OUT;
 	output [6:0] HEX0, HEX1, HEX2, HEX3;
 	
 	wire clkdiv;
@@ -27,6 +27,6 @@ module ex14_top (CLOCK_50, SW, DAC_CS, DAC_SDI, DAC_LD, DAC_SCK, pwm_out, HEX0, 
 	
 //Final outputs
 	spi2dac(CLOCK_50, D[9:0], clkdiv, DAC_SDI, DAC_CS, DAC_SCK, DAC_LD);
-	pwm(CLOCK_50, D[9:0], clkdiv, pwm_out);
+	pwm(CLOCK_50, D[9:0], clkdiv, PWM_OUT);
 	
 endmodule

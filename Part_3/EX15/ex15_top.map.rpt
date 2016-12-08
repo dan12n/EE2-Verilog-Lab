@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex15_top
-Wed Dec 07 15:50:50 2016
+Thu Dec 08 16:18:12 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -14,31 +14,32 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. State Machine - |ex15_top|spi2dac:comb_14|sr_state
- 10. State Machine - |ex15_top|spi2adc:comb_3|sr_state
- 11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for ROM:comb_13|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated
- 17. Parameter Settings for User Entity Instance: spi2adc:comb_3
- 18. Parameter Settings for User Entity Instance: multiplier:comb_4|lpm_mult:lpm_mult_component
- 19. Parameter Settings for User Entity Instance: divider_5000:comb_10
- 20. Parameter Settings for User Entity Instance: ROM:comb_13|altsyncram:altsyncram_component
- 21. Parameter Settings for User Entity Instance: spi2dac:comb_14
- 22. lpm_mult Parameter Settings by Entity Instance
- 23. altsyncram Parameter Settings by Entity Instance
- 24. Port Connectivity Checks: "bin2bcd_16:comb_5|add3_ge5:A18"
- 25. Port Connectivity Checks: "bin2bcd_16:comb_5|add3_ge5:A9"
- 26. Port Connectivity Checks: "bin2bcd_16:comb_5|add3_ge5:A3"
- 27. Port Connectivity Checks: "bin2bcd_16:comb_5"
- 28. Port Connectivity Checks: "multiplier:comb_4"
- 29. Port Connectivity Checks: "spi2adc:comb_3"
- 30. Post-Synthesis Netlist Statistics for Top Partition
- 31. Elapsed Time Per Partition
- 32. Analysis & Synthesis Messages
- 33. Analysis & Synthesis Suppressed Messages
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |ex15_top|spi2dac:comb_15|sr_state
+ 11. State Machine - |ex15_top|spi2adc:comb_3|sr_state
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for ROM:comb_14|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated
+ 18. Parameter Settings for User Entity Instance: spi2adc:comb_3
+ 19. Parameter Settings for User Entity Instance: multiplier:comb_4|lpm_mult:lpm_mult_component
+ 20. Parameter Settings for User Entity Instance: divider_5000:comb_11
+ 21. Parameter Settings for User Entity Instance: ROM:comb_14|altsyncram:altsyncram_component
+ 22. Parameter Settings for User Entity Instance: spi2dac:comb_15
+ 23. lpm_mult Parameter Settings by Entity Instance
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "bin2bcd_16:comb_5|add3_ge5:A18"
+ 26. Port Connectivity Checks: "bin2bcd_16:comb_5|add3_ge5:A9"
+ 27. Port Connectivity Checks: "bin2bcd_16:comb_5|add3_ge5:A3"
+ 28. Port Connectivity Checks: "bin2bcd_16:comb_5"
+ 29. Port Connectivity Checks: "multiplier:comb_4"
+ 30. Port Connectivity Checks: "spi2adc:comb_3"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
+ 34. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -65,16 +66,16 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Dec 07 15:50:50 2016           ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 08 16:18:12 2016           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; ex15_top                                        ;
 ; Top-level Entity Name           ; ex15_top                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 110                                             ;
-; Total pins                      ; 34                                              ;
+; Total registers                 ; 78                                              ;
+; Total pins                      ; 45                                              ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 10,240                                          ;
+; Total block memory bits         ; 20                                              ;
 ; Total DSP Blocks                ; 0                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -186,7 +187,8 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -202,11 +204,11 @@ agreement for further details.
 ; dec_to_7seg.v                                                      ; yes             ; User Verilog HDL File                  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/dec_to_7seg.v          ;         ;
 ; divider_5000.v                                                     ; yes             ; User Verilog HDL File                  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/divider_5000.v         ;         ;
 ; ex15_top.v                                                         ; yes             ; User Verilog HDL File                  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v             ;         ;
-; multiplier.v                                                       ; yes             ; User Wizard-Generated File             ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/multiplier.v           ;         ;
 ; pwm.v                                                              ; yes             ; User Verilog HDL File                  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/pwm.v                  ;         ;
 ; ROM.v                                                              ; yes             ; User Wizard-Generated File             ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ROM.v                  ;         ;
 ; spi2adc.v                                                          ; yes             ; User Verilog HDL File                  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/spi2adc.v              ;         ;
 ; spi2dac.v                                                          ; yes             ; User Verilog HDL File                  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/spi2dac.v              ;         ;
+; multiplier.v                                                       ; yes             ; User Wizard-Generated File             ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/multiplier.v           ;         ;
 ; lpm_mult.tdf                                                       ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/lpm_mult.tdf              ;         ;
 ; aglobal160.inc                                                     ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/aglobal160.inc            ;         ;
 ; lpm_add_sub.inc                                                    ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/lpm_add_sub.inc           ;         ;
@@ -248,84 +250,44 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 134            ;
+; Estimate of Logic utilization (ALMs needed) ; 48             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 235            ;
+; Combinational ALUT usage for logic          ; 77             ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 20             ;
-;     -- 5 input functions                    ; 22             ;
-;     -- 4 input functions                    ; 117            ;
-;     -- <=3 input functions                  ; 76             ;
+;     -- 6 input functions                    ; 8              ;
+;     -- 5 input functions                    ; 19             ;
+;     -- 4 input functions                    ; 11             ;
+;     -- <=3 input functions                  ; 39             ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 110            ;
+; Dedicated logic registers                   ; 78             ;
 ;                                             ;                ;
-; I/O pins                                    ; 34             ;
+; I/O pins                                    ; 45             ;
 ; Total MLAB memory bits                      ; 0              ;
-; Total block memory bits                     ; 10240          ;
+; Total block memory bits                     ; 20             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 52             ;
-; Total fan-out                               ; 1347           ;
-; Average fan-out                             ; 3.18           ;
+; Total fan-out                               ; 536            ;
+; Average fan-out                             ; 2.10           ;
 +---------------------------------------------+----------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                            ;
-+---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                             ; Entity Name     ; Library Name ;
-+---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |ex15_top                                         ; 235 (0)           ; 110 (0)      ; 10240             ; 0          ; 34   ; 0            ; |ex15_top                                                                                                                                                       ; ex15_top        ; work         ;
-;    |ROM:comb_13|                                  ; 0 (0)             ; 0 (0)        ; 10240             ; 0          ; 0    ; 0            ; |ex15_top|ROM:comb_13                                                                                                                                           ; ROM             ; work         ;
-;       |altsyncram:altsyncram_component|           ; 0 (0)             ; 0 (0)        ; 10240             ; 0          ; 0    ; 0            ; |ex15_top|ROM:comb_13|altsyncram:altsyncram_component                                                                                                           ; altsyncram      ; work         ;
-;          |altsyncram_dhh1:auto_generated|         ; 0 (0)             ; 0 (0)        ; 10240             ; 0          ; 0    ; 0            ; |ex15_top|ROM:comb_13|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated                                                                            ; altsyncram_dhh1 ; work         ;
-;    |async_adder:comb_11|                          ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|async_adder:comb_11                                                                                                                                   ; async_adder     ; work         ;
-;    |bin2bcd_16:comb_5|                            ; 86 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5                                                                                                                                     ; bin2bcd_16      ; work         ;
-;       |add3_ge5:A10|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A10                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A11|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A11                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A13|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A13                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A14|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A14                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A15|                              ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A15                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A16|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A16                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A17|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A17                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A19|                              ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A19                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A1|                               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A1                                                                                                                         ; add3_ge5        ; work         ;
-;       |add3_ge5:A20|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A20                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A21|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A21                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A23|                              ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A23                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A24|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A24                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A25|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A25                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A26|                              ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A26                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A27|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A27                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A28|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A28                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A29|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A29                                                                                                                        ; add3_ge5        ; work         ;
-;       |add3_ge5:A2|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A2                                                                                                                         ; add3_ge5        ; work         ;
-;       |add3_ge5:A4|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A4                                                                                                                         ; add3_ge5        ; work         ;
-;       |add3_ge5:A5|                               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A5                                                                                                                         ; add3_ge5        ; work         ;
-;       |add3_ge5:A6|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A6                                                                                                                         ; add3_ge5        ; work         ;
-;       |add3_ge5:A7|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A7                                                                                                                         ; add3_ge5        ; work         ;
-;       |add3_ge5:A8|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:comb_5|add3_ge5:A8                                                                                                                         ; add3_ge5        ; work         ;
-;    |d_register:comb_12|                           ; 0 (0)             ; 10 (10)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|d_register:comb_12                                                                                                                                    ; d_register      ; work         ;
-;    |dec_to_7seg:comb_6|                           ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|dec_to_7seg:comb_6                                                                                                                                    ; dec_to_7seg     ; work         ;
-;    |dec_to_7seg:comb_7|                           ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|dec_to_7seg:comb_7                                                                                                                                    ; dec_to_7seg     ; work         ;
-;    |dec_to_7seg:comb_8|                           ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|dec_to_7seg:comb_8                                                                                                                                    ; dec_to_7seg     ; work         ;
-;    |dec_to_7seg:comb_9|                           ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|dec_to_7seg:comb_9                                                                                                                                    ; dec_to_7seg     ; work         ;
-;    |divider_5000:comb_10|                         ; 20 (20)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|divider_5000:comb_10                                                                                                                                  ; divider_5000    ; work         ;
-;    |multiplier:comb_4|                            ; 36 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|multiplier:comb_4                                                                                                                                     ; multiplier      ; work         ;
-;       |lpm_mult:lpm_mult_component|               ; 36 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|multiplier:comb_4|lpm_mult:lpm_mult_component                                                                                                         ; lpm_mult        ; work         ;
-;          |multcore:mult_core|                     ; 36 (6)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|multiplier:comb_4|lpm_mult:lpm_mult_component|multcore:mult_core                                                                                      ; multcore        ; work         ;
-;             |mpar_add:padder|                     ; 30 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|multiplier:comb_4|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add        ; work         ;
-;                |lpm_add_sub:adder[0]|             ; 18 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|multiplier:comb_4|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub     ; work         ;
-;                   |add_sub_d9h:auto_generated|    ; 18 (18)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|multiplier:comb_4|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated                      ; add_sub_d9h     ; work         ;
-;                |mpar_add:sub_par_add|             ; 12 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|multiplier:comb_4|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add        ; work         ;
-;                   |lpm_add_sub:adder[0]|          ; 12 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|multiplier:comb_4|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub     ; work         ;
-;                      |add_sub_89h:auto_generated| ; 12 (12)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|multiplier:comb_4|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_89h:auto_generated ; add_sub_89h     ; work         ;
-;    |pwm:comb_15|                                  ; 16 (16)           ; 21 (21)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|pwm:comb_15                                                                                                                                           ; pwm             ; work         ;
-;    |spi2adc:comb_3|                               ; 20 (20)           ; 39 (39)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|spi2adc:comb_3                                                                                                                                        ; spi2adc         ; work         ;
-;    |spi2dac:comb_14|                              ; 19 (19)           ; 23 (23)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|spi2dac:comb_14                                                                                                                                       ; spi2dac         ; work         ;
-+---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                         ;
++-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Entity Name     ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+-----------------+--------------+
+; |ex15_top                                 ; 77 (1)            ; 78 (0)       ; 20                ; 0          ; 45   ; 0            ; |ex15_top                                                                            ; ex15_top        ; work         ;
+;    |ROM:comb_14|                          ; 0 (0)             ; 0 (0)        ; 20                ; 0          ; 0    ; 0            ; |ex15_top|ROM:comb_14                                                                ; ROM             ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 20                ; 0          ; 0    ; 0            ; |ex15_top|ROM:comb_14|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;          |altsyncram_dhh1:auto_generated| ; 0 (0)             ; 0 (0)        ; 20                ; 0          ; 0    ; 0            ; |ex15_top|ROM:comb_14|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated ; altsyncram_dhh1 ; work         ;
+;    |divider_5000:comb_11|                 ; 20 (20)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|divider_5000:comb_11                                                       ; divider_5000    ; work         ;
+;    |pwm:comb_16|                          ; 19 (19)           ; 21 (21)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|pwm:comb_16                                                                ; pwm             ; work         ;
+;    |spi2adc:comb_3|                       ; 18 (18)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|spi2adc:comb_3                                                             ; spi2adc         ; work         ;
+;    |spi2dac:comb_15|                      ; 19 (19)           ; 23 (23)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|spi2dac:comb_15                                                            ; spi2dac         ; work         ;
++-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -334,13 +296,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+------------------------------------+
 ; Name                                                                                  ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                ;
 +---------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+------------------------------------+
-; ROM:comb_13|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 1024         ; 10           ; --           ; --           ; 10240 ; ../../Other/sinegen.m/rom_data.mif ;
+; ROM:comb_14|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 1024         ; 10           ; --           ; --           ; 10240 ; ../../Other/sinegen.m/rom_data.mif ;
 +---------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                         ;
++--------+--------------+---------+--------------+--------------+-----------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance             ; IP Include File ;
++--------+--------------+---------+--------------+--------------+-----------------------------+-----------------+
+; Altera ; LPM_MULT     ; 16.0    ; N/A          ; N/A          ; |ex15_top|multiplier:comb_4 ; multiplier.v    ;
++--------+--------------+---------+--------------+--------------+-----------------------------+-----------------+
 
 
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------+
-; State Machine - |ex15_top|spi2dac:comb_14|sr_state                                       ;
+; State Machine - |ex15_top|spi2dac:comb_15|sr_state                                       ;
 +------------------------+---------------+------------------------+------------------------+
 ; Name                   ; sr_state.IDLE ; sr_state.WAIT_CSB_HIGH ; sr_state.WAIT_CSB_FALL ;
 +------------------------+---------------+------------------------+------------------------+
@@ -362,29 +333,47 @@ Encoding Type:  One-Hot
 +------------------------+---------------+------------------------+------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; spi2dac:comb_14|shift_reg[0,1]        ; Stuck at GND due to stuck port data_in ;
-; spi2dac:comb_14|ctr[4]                ; Merged with spi2adc:comb_3|ctr[4]      ;
-; spi2dac:comb_14|ctr[3]                ; Merged with spi2adc:comb_3|ctr[3]      ;
-; spi2dac:comb_14|ctr[2]                ; Merged with spi2adc:comb_3|ctr[2]      ;
-; spi2dac:comb_14|ctr[1]                ; Merged with spi2adc:comb_3|ctr[1]      ;
-; spi2dac:comb_14|ctr[0]                ; Merged with spi2adc:comb_3|ctr[0]      ;
-; Total Number of Removed Registers = 7 ;                                        ;
-+---------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; spi2dac:comb_15|shift_reg[0]           ; Stuck at GND due to stuck port data_in ;
+; spi2adc:comb_3|shift_reg[0..9]         ; Stuck at GND due to stuck port data_in ;
+; spi2adc:comb_3|shift_ena               ; Lost fanout                            ;
+; spi2dac:comb_15|shift_reg[1]           ; Stuck at GND due to stuck port data_in ;
+; spi2adc:comb_3|data_from_adc[0..9]     ; Stuck at GND due to stuck port data_in ;
+; spi2adc:comb_3|adc_done                ; Lost fanout                            ;
+; d_register:comb_13|Q[1..9]             ; Merged with d_register:comb_13|Q[0]    ;
+; spi2dac:comb_15|ctr[4]                 ; Merged with spi2adc:comb_3|ctr[4]      ;
+; spi2dac:comb_15|ctr[3]                 ; Merged with spi2adc:comb_3|ctr[3]      ;
+; spi2dac:comb_15|ctr[2]                 ; Merged with spi2adc:comb_3|ctr[2]      ;
+; spi2dac:comb_15|ctr[1]                 ; Merged with spi2adc:comb_3|ctr[1]      ;
+; spi2dac:comb_15|ctr[0]                 ; Merged with spi2adc:comb_3|ctr[0]      ;
+; d_register:comb_13|Q[0]                ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 39 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                       ;
-+------------------------------+---------------------------+----------------------------------------+
-; Register name                ; Reason for Removal        ; Registers Removed due to This Register ;
-+------------------------------+---------------------------+----------------------------------------+
-; spi2dac:comb_14|shift_reg[0] ; Stuck at GND              ; spi2dac:comb_14|shift_reg[1]           ;
-;                              ; due to stuck port data_in ;                                        ;
-+------------------------------+---------------------------+----------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                  ;
++------------------------------+---------------------------+-------------------------------------------------------------------+
+; Register name                ; Reason for Removal        ; Registers Removed due to This Register                            ;
++------------------------------+---------------------------+-------------------------------------------------------------------+
+; spi2adc:comb_3|shift_reg[0]  ; Stuck at GND              ; spi2adc:comb_3|shift_reg[1], spi2adc:comb_3|shift_reg[2],         ;
+;                              ; due to stuck port data_in ; spi2adc:comb_3|shift_reg[3], spi2adc:comb_3|shift_reg[4],         ;
+;                              ;                           ; spi2adc:comb_3|shift_reg[5], spi2adc:comb_3|shift_reg[6],         ;
+;                              ;                           ; spi2adc:comb_3|shift_reg[7], spi2adc:comb_3|shift_reg[8],         ;
+;                              ;                           ; spi2adc:comb_3|shift_reg[9], spi2adc:comb_3|shift_ena,            ;
+;                              ;                           ; spi2adc:comb_3|data_from_adc[4], spi2adc:comb_3|data_from_adc[3], ;
+;                              ;                           ; spi2adc:comb_3|data_from_adc[2], spi2adc:comb_3|data_from_adc[1], ;
+;                              ;                           ; spi2adc:comb_3|data_from_adc[0], spi2adc:comb_3|data_from_adc[5], ;
+;                              ;                           ; spi2adc:comb_3|data_from_adc[6], spi2adc:comb_3|data_from_adc[7], ;
+;                              ;                           ; spi2adc:comb_3|data_from_adc[8], spi2adc:comb_3|data_from_adc[9], ;
+;                              ;                           ; spi2adc:comb_3|adc_done                                           ;
+; spi2dac:comb_15|shift_reg[0] ; Stuck at GND              ; spi2dac:comb_15|shift_reg[1]                                      ;
+;                              ; due to stuck port data_in ;                                                                   ;
++------------------------------+---------------------------+-------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -392,12 +381,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 110   ;
+; Total registers                              ; 78    ;
 ; Number of registers using Synchronous Clear  ; 11    ;
 ; Number of registers using Synchronous Load   ; 9     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Clock Enable       ; 12    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -407,7 +396,7 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; spi2adc:comb_3|data_valid              ; 5       ;
+; spi2adc:comb_3|data_valid              ; 6       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -417,12 +406,12 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |ex15_top|spi2dac:comb_14|Selector2 ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |ex15_top|spi2dac:comb_15|Selector1 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------+
-; Source assignments for ROM:comb_13|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated ;
+; Source assignments for ROM:comb_14|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated ;
 +---------------------------------+--------------------+------+-------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                  ;
 +---------------------------------+--------------------+------+-------------------------------------+
@@ -481,7 +470,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divider_5000:comb_10 ;
+; Parameter Settings for User Entity Instance: divider_5000:comb_11 ;
 +----------------+-------+------------------------------------------+
 ; Parameter Name ; Value ; Type                                     ;
 +----------------+-------+------------------------------------------+
@@ -491,7 +480,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ROM:comb_13|altsyncram:altsyncram_component ;
+; Parameter Settings for User Entity Instance: ROM:comb_14|altsyncram:altsyncram_component ;
 +------------------------------------+------------------------------------+----------------+
 ; Parameter Name                     ; Value                              ; Type           ;
 +------------------------------------+------------------------------------+----------------+
@@ -552,7 +541,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: spi2dac:comb_14 ;
+; Parameter Settings for User Entity Instance: spi2dac:comb_15 ;
 +----------------+-------+-------------------------------------+
 ; Parameter Name ; Value ; Type                                ;
 +----------------+-------+-------------------------------------+
@@ -593,7 +582,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                      ; Value                                       ;
 +-------------------------------------------+---------------------------------------------+
 ; Number of entity instances                ; 1                                           ;
-; Entity Instance                           ; ROM:comb_13|altsyncram:altsyncram_component ;
+; Entity Instance                           ; ROM:comb_14|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; ROM                                         ;
 ;     -- WIDTH_A                            ; 10                                          ;
 ;     -- NUMWORDS_A                         ; 1024                                        ;
@@ -634,13 +623,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+--------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bin2bcd_16:comb_5"                                                                   ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; BCD_4 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------+
+; Port Connectivity Checks: "bin2bcd_16:comb_5" ;
++-----------+-------+----------+----------------+
+; Port      ; Type  ; Severity ; Details        ;
++-----------+-------+----------+----------------+
+; B[15..14] ; Input ; Info     ; Stuck at GND   ;
++-----------+-------+----------+----------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -659,8 +648,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 ; channel    ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; data_valid ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; adc_cs     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; adc_sck    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -669,31 +656,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 110                         ;
-;     ENA               ; 32                          ;
+; arriav_ff             ; 78                          ;
+;     ENA               ; 12                          ;
 ;     SCLR              ; 11                          ;
 ;     SLD               ; 9                           ;
-;     plain             ; 58                          ;
-; arriav_lcell_comb     ; 253                         ;
-;     arith             ; 65                          ;
+;     plain             ; 46                          ;
+; arriav_lcell_comb     ; 82                          ;
+;     arith             ; 25                          ;
+;         1 data inputs ; 24                          ;
+;         2 data inputs ; 1                           ;
+;     normal            ; 57                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 31                          ;
-;         2 data inputs ; 16                          ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 5                           ;
-;         5 data inputs ; 6                           ;
-;     normal            ; 188                         ;
-;         1 data inputs ; 21                          ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 112                         ;
-;         5 data inputs ; 16                          ;
-;         6 data inputs ; 20                          ;
-; boundary_port         ; 34                          ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 11                          ;
+;         5 data inputs ; 19                          ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 45                          ;
 ; stratixv_ram_block    ; 10                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 16.00                       ;
-; Average LUT depth     ; 7.90                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.55                        ;
 +-----------------------+-----------------------------+
 
 
@@ -702,7 +686,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -712,7 +696,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Wed Dec 07 15:50:37 2016
+    Info: Processing started: Thu Dec 08 16:17:58 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex15_top -c ex15_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -734,8 +718,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file ex15_to
     Info (12023): Found entity 1: ex15_top File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hex_to_7seg.v
     Info (12023): Found entity 1: hex_to_7seg File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/hex_to_7seg.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file multiplier.v
-    Info (12023): Found entity 1: multiplier File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/multiplier.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file pwm.v
     Info (12023): Found entity 1: pwm File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/pwm.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rom.v
@@ -744,22 +726,25 @@ Info (12021): Found 1 design units, including 1 entities, in source file spi2adc
     Info (12023): Found entity 1: spi2adc File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/spi2adc.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file spi2dac.v
     Info (12023): Found entity 1: spi2dac File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/spi2dac.v Line: 9
-Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(17): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 17
-Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(20): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 20
-Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(21): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 21
-Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(22): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 22
-Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(23): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file multiplier.v
+    Info (12023): Found entity 1: multiplier File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/multiplier.v Line: 40
+Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(19): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 19
 Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(24): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 24
 Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(25): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(26): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 26
+Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(27): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 27
+Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(28): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 28
 Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(29): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 29
 Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(30): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 30
-Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(31): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 31
-Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(32): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 32
+Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(34): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 34
 Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(35): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 35
 Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(36): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 36
+Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(37): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 37
+Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(40): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 40
+Critical Warning (10846): Verilog HDL Instantiation warning at ex15_top.v(41): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 41
 Info (12127): Elaborating entity "ex15_top" for the top level hierarchy
-Info (12128): Elaborating entity "spi2adc" for hierarchy "spi2adc:comb_3" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 17
-Info (12128): Elaborating entity "multiplier" for hierarchy "multiplier:comb_4" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 20
+Info (12128): Elaborating entity "spi2adc" for hierarchy "spi2adc:comb_3" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 19
+Info (12128): Elaborating entity "multiplier" for hierarchy "multiplier:comb_4" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 24
 Info (12128): Elaborating entity "lpm_mult" for hierarchy "multiplier:comb_4|lpm_mult:lpm_mult_component" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/multiplier.v Line: 59
 Info (12130): Elaborated megafunction instantiation "multiplier:comb_4|lpm_mult:lpm_mult_component" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/multiplier.v Line: 59
 Info (12133): Instantiated megafunction "multiplier:comb_4|lpm_mult:lpm_mult_component" with the following parameter: File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/multiplier.v Line: 59
@@ -787,17 +772,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
 Info (12128): Elaborating entity "add_sub_89h" for hierarchy "multiplier:comb_4|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_89h:auto_generated" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 119
 Info (12128): Elaborating entity "altshift" for hierarchy "multiplier:comb_4|lpm_mult:lpm_mult_component|altshift:external_latency_ffs" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
 Info (12131): Elaborated megafunction instantiation "multiplier:comb_4|lpm_mult:lpm_mult_component|altshift:external_latency_ffs", which is child of megafunction instantiation "multiplier:comb_4|lpm_mult:lpm_mult_component" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
-Info (12128): Elaborating entity "bin2bcd_16" for hierarchy "bin2bcd_16:comb_5" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 21
+Info (12128): Elaborating entity "bin2bcd_16" for hierarchy "bin2bcd_16:comb_5" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 25
 Info (12128): Elaborating entity "add3_ge5" for hierarchy "bin2bcd_16:comb_5|add3_ge5:A1" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/b_to_bcd.v Line: 26
-Info (12128): Elaborating entity "dec_to_7seg" for hierarchy "dec_to_7seg:comb_6" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 22
-Info (12128): Elaborating entity "divider_5000" for hierarchy "divider_5000:comb_10" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 29
+Info (12128): Elaborating entity "dec_to_7seg" for hierarchy "dec_to_7seg:comb_6" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 26
+Info (12128): Elaborating entity "divider_5000" for hierarchy "divider_5000:comb_11" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 34
 Warning (10230): Verilog HDL assignment warning at divider_5000.v(14): truncated value with size 32 to match size of target (16) File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/divider_5000.v Line: 14
-Info (12128): Elaborating entity "async_adder" for hierarchy "async_adder:comb_11" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 30
-Info (12128): Elaborating entity "d_register" for hierarchy "d_register:comb_12" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 31
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:comb_13" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 32
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:comb_13|altsyncram:altsyncram_component" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ROM.v Line: 82
-Info (12130): Elaborated megafunction instantiation "ROM:comb_13|altsyncram:altsyncram_component" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ROM.v Line: 82
-Info (12133): Instantiated megafunction "ROM:comb_13|altsyncram:altsyncram_component" with the following parameter: File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ROM.v Line: 82
+Info (12128): Elaborating entity "async_adder" for hierarchy "async_adder:comb_12" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 35
+Info (12128): Elaborating entity "d_register" for hierarchy "d_register:comb_13" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 36
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:comb_14" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 37
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:comb_14|altsyncram:altsyncram_component" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ROM.v Line: 82
+Info (12130): Elaborated megafunction instantiation "ROM:comb_14|altsyncram:altsyncram_component" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ROM.v Line: 82
+Info (12133): Instantiated megafunction "ROM:comb_14|altsyncram:altsyncram_component" with the following parameter: File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ROM.v Line: 82
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -814,23 +799,62 @@ Info (12133): Instantiated megafunction "ROM:comb_13|altsyncram:altsyncram_compo
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_dhh1.tdf
     Info (12023): Found entity 1: altsyncram_dhh1 File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/db/altsyncram_dhh1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_dhh1" for hierarchy "ROM:comb_13|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated" File: c:/altera/16.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "spi2dac" for hierarchy "spi2dac:comb_14" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 35
-Info (12128): Elaborating entity "pwm" for hierarchy "pwm:comb_15" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 36
+Info (12128): Elaborating entity "altsyncram_dhh1" for hierarchy "ROM:comb_14|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated" File: c:/altera/16.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "spi2dac" for hierarchy "spi2dac:comb_15" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 40
+Info (12128): Elaborating entity "pwm" for hierarchy "pwm:comb_16" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 41
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 5
+    Warning (13410): Pin "ADC_SDO" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.v Line: 4
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 9 MSB VCC or GND address nodes from RAM block "ROM:comb_14|altsyncram:altsyncram_component|altsyncram_dhh1:auto_generated|ALTSYNCRAM" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/db/altsyncram_dhh1.tdf Line: 32
 Info (144001): Generated suppressed messages file //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 319 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 152 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 275 logic cells
+    Info (21059): Implemented 44 output pins
+    Info (21061): Implemented 97 logic cells
     Info (21064): Implemented 10 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 919 megabytes
-    Info: Processing ended: Wed Dec 07 15:50:50 2016
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 933 megabytes
+    Info: Processing ended: Thu Dec 08 16:18:12 2016
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +------------------------------------------+
