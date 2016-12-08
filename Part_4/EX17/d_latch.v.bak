@@ -1,0 +1,7 @@
+//D Flip Flop
+module d_register (D, en, Q);
+	input D, en;
+	output Q;
+	always @(en or D)
+		Q <= D;
+endmodule

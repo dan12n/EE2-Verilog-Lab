@@ -1,0 +1,9 @@
+//async addder
+
+module async_adder(A, SW, out);
+	input [9:0] A;
+	input [9:0] SW;
+	
+	assign out = A + SW;
+	
+endmodule
