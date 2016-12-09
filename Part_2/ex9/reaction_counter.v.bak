@@ -1,0 +1,21 @@
+module reaction_counter (en_reaction_counter, clk_div_2500, KEY0, reaction_time);
+	input en_reaction_counter, clk_div_2500, KEY0;
+	output [6:0] reaction_time;
+
+	reg [15:0] count;
+	wire [3:0] BCD0, BCD1, BCD2, BCD3, BCD4;
+
+	initial count = 0;
+
+	always @(posedge clk_div_2500)
+		if (en_reaction_counter == 1'b1) begin
+			count <= count + 1;
+			if (KEY0)
+				en_reaction_counter <= 1'b0;
+				end
+
+	always @ (*)
+		assign count = reaction_time;
+		
+		endmodule
+		
