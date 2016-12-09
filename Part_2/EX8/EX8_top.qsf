@@ -228,7 +228,6 @@ set_global_assignment -name VERILOG_FILE divider_2500.v
 set_global_assignment -name VERILOG_FILE delay.v
 set_global_assignment -name VERILOG_FILE dec_to_7seg.v
 set_global_assignment -name VERILOG_FILE LFSR.v
-set_global_assignment -name VERILOG_FILE EX7_top.v
 set_global_assignment -name VERILOG_FILE b_to_bcd.v
 set_global_assignment -name VERILOG_FILE add3_ge5.v
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"

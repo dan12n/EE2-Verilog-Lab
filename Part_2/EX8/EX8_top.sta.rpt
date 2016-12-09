@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for EX8_top
-Thu Nov 24 18:00:38 2016
+Fri Dec 09 11:55:45 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -100,14 +100,14 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.06        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.2%      ;
-;     Processor 3            ;   1.2%      ;
-;     Processor 4            ;   1.1%      ;
+;     Processor 2            ;   2.1%      ;
+;     Processor 3            ;   2.0%      ;
+;     Processor 4            ;   2.0%      ;
 +----------------------------+-------------+
 
 
@@ -118,6 +118,7 @@ agreement for further details.
 +------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------+
 ; CLOCK_50                     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }                     ;
 ; divider_50000:comb_3|out_clk ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divider_50000:comb_3|out_clk } ;
+; FSM:comb_7|state.DELAY       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FSM:comb_7|state.DELAY }       ;
 +------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------+
 
 
@@ -126,8 +127,9 @@ agreement for further details.
 +------------+-----------------+------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                   ; Note ;
 +------------+-----------------+------------------------------+------+
-; 293.43 MHz ; 293.43 MHz      ; divider_50000:comb_3|out_clk ;      ;
-; 309.41 MHz ; 309.41 MHz      ; CLOCK_50                     ;      ;
+; 206.48 MHz ; 206.48 MHz      ; divider_50000:comb_3|out_clk ;      ;
+; 229.67 MHz ; 229.67 MHz      ; FSM:comb_7|state.DELAY       ;      ;
+; 291.21 MHz ; 291.21 MHz      ; CLOCK_50                     ;      ;
 +------------+-----------------+------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -143,8 +145,9 @@ HTML report is unavailable in plain text report export.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; divider_50000:comb_3|out_clk ; -2.408 ; -58.805       ;
-; CLOCK_50                     ; -2.232 ; -44.820       ;
+; divider_50000:comb_3|out_clk ; -3.855 ; -126.283      ;
+; FSM:comb_7|state.DELAY       ; -2.975 ; -2.975        ;
+; CLOCK_50                     ; -2.640 ; -88.699       ;
 +------------------------------+--------+---------------+
 
 
@@ -153,8 +156,9 @@ HTML report is unavailable in plain text report export.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; divider_50000:comb_3|out_clk ; 0.298 ; 0.000         ;
-; CLOCK_50                     ; 0.403 ; 0.000         ;
+; CLOCK_50                     ; 0.231 ; 0.000         ;
+; divider_50000:comb_3|out_clk ; 0.291 ; 0.000         ;
+; FSM:comb_7|state.DELAY       ; 0.759 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -175,8 +179,9 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50                     ; -0.629 ; -16.084       ;
-; divider_50000:comb_3|out_clk ; -0.394 ; -18.313       ;
+; CLOCK_50                     ; -0.671 ; -27.063       ;
+; divider_50000:comb_3|out_clk ; -0.394 ; -27.565       ;
+; FSM:comb_7|state.DELAY       ; 0.445  ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -191,8 +196,9 @@ No synchronizer chains to report.
 +------------+-----------------+------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                   ; Note ;
 +------------+-----------------+------------------------------+------+
-; 287.19 MHz ; 287.19 MHz      ; CLOCK_50                     ;      ;
-; 300.3 MHz  ; 300.3 MHz       ; divider_50000:comb_3|out_clk ;      ;
+; 205.21 MHz ; 205.21 MHz      ; divider_50000:comb_3|out_clk ;      ;
+; 224.32 MHz ; 224.32 MHz      ; FSM:comb_7|state.DELAY       ;      ;
+; 273.82 MHz ; 273.82 MHz      ; CLOCK_50                     ;      ;
 +------------+-----------------+------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -202,19 +208,21 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50                     ; -2.482 ; -45.123       ;
-; divider_50000:comb_3|out_clk ; -2.330 ; -57.072       ;
+; divider_50000:comb_3|out_clk ; -3.945 ; -127.034      ;
+; FSM:comb_7|state.DELAY       ; -2.943 ; -2.943        ;
+; CLOCK_50                     ; -2.652 ; -82.643       ;
 +------------------------------+--------+---------------+
 
 
-+------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                    ;
-+------------------------------+-------+---------------+
-; Clock                        ; Slack ; End Point TNS ;
-+------------------------------+-------+---------------+
-; divider_50000:comb_3|out_clk ; 0.283 ; 0.000         ;
-; CLOCK_50                     ; 0.396 ; 0.000         ;
-+------------------------------+-------+---------------+
++-------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                     ;
++------------------------------+--------+---------------+
+; Clock                        ; Slack  ; End Point TNS ;
++------------------------------+--------+---------------+
+; CLOCK_50                     ; -0.106 ; -1.721        ;
+; divider_50000:comb_3|out_clk ; 0.288  ; 0.000         ;
+; FSM:comb_7|state.DELAY       ; 0.817  ; 0.000         ;
++------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -234,8 +242,9 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50                     ; -0.704 ; -14.798       ;
-; divider_50000:comb_3|out_clk ; -0.394 ; -18.026       ;
+; CLOCK_50                     ; -0.715 ; -24.630       ;
+; divider_50000:comb_3|out_clk ; -0.394 ; -27.024       ;
+; FSM:comb_7|state.DELAY       ; 0.449  ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -250,8 +259,9 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; divider_50000:comb_3|out_clk ; -1.079 ; -26.331       ;
-; CLOCK_50                     ; -1.016 ; -16.602       ;
+; CLOCK_50                     ; -2.263 ; -54.145       ;
+; divider_50000:comb_3|out_clk ; -1.823 ; -59.927       ;
+; FSM:comb_7|state.DELAY       ; -1.517 ; -1.517        ;
 +------------------------------+--------+---------------+
 
 
@@ -260,8 +270,9 @@ No synchronizer chains to report.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; divider_50000:comb_3|out_clk ; 0.107 ; 0.000         ;
-; CLOCK_50                     ; 0.217 ; 0.000         ;
+; divider_50000:comb_3|out_clk ; 0.098 ; 0.000         ;
+; CLOCK_50                     ; 0.134 ; 0.000         ;
+; FSM:comb_7|state.DELAY       ; 0.395 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -282,8 +293,9 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50                     ; -0.787 ; -11.720       ;
-; divider_50000:comb_3|out_clk ; 0.117  ; 0.000         ;
+; CLOCK_50                     ; -0.797 ; -18.836       ;
+; divider_50000:comb_3|out_clk ; -0.021 ; -0.361        ;
+; FSM:comb_7|state.DELAY       ; 0.475  ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -298,8 +310,9 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50                     ; -0.975 ; -13.711       ;
-; divider_50000:comb_3|out_clk ; -0.943 ; -22.319       ;
+; CLOCK_50                     ; -1.774 ; -43.886       ;
+; divider_50000:comb_3|out_clk ; -1.727 ; -54.795       ;
+; FSM:comb_7|state.DELAY       ; -1.380 ; -1.380        ;
 +------------------------------+--------+---------------+
 
 
@@ -308,8 +321,9 @@ No synchronizer chains to report.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; divider_50000:comb_3|out_clk ; 0.092 ; 0.000         ;
-; CLOCK_50                     ; 0.200 ; 0.000         ;
+; divider_50000:comb_3|out_clk ; 0.084 ; 0.000         ;
+; CLOCK_50                     ; 0.105 ; 0.000         ;
+; FSM:comb_7|state.DELAY       ; 0.379 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -330,8 +344,9 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; CLOCK_50                     ; -0.842 ; -13.955       ;
-; divider_50000:comb_3|out_clk ; 0.129  ; 0.000         ;
+; CLOCK_50                     ; -0.836 ; -22.347       ;
+; divider_50000:comb_3|out_clk ; 0.018  ; 0.000         ;
+; FSM:comb_7|state.DELAY       ; 0.483  ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -341,18 +356,20 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                         ;
-+-------------------------------+----------+-------+----------+---------+---------------------+
-; Clock                         ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+-------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack              ; -2.482   ; 0.092 ; N/A      ; N/A     ; -0.842              ;
-;  CLOCK_50                     ; -2.482   ; 0.200 ; N/A      ; N/A     ; -0.842              ;
-;  divider_50000:comb_3|out_clk ; -2.408   ; 0.092 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS               ; -103.625 ; 0.0   ; 0.0      ; 0.0     ; -34.397             ;
-;  CLOCK_50                     ; -45.123  ; 0.000 ; N/A      ; N/A     ; -16.084             ;
-;  divider_50000:comb_3|out_clk ; -58.805  ; 0.000 ; N/A      ; N/A     ; -18.313             ;
-+-------------------------------+----------+-------+----------+---------+---------------------+
++----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                          ;
++-------------------------------+----------+--------+----------+---------+---------------------+
+; Clock                         ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack              ; -3.945   ; -0.106 ; N/A      ; N/A     ; -0.836              ;
+;  CLOCK_50                     ; -2.652   ; -0.106 ; N/A      ; N/A     ; -0.836              ;
+;  FSM:comb_7|state.DELAY       ; -2.975   ; 0.379  ; N/A      ; N/A     ; 0.445               ;
+;  divider_50000:comb_3|out_clk ; -3.945   ; 0.084  ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS               ; -217.957 ; -1.721 ; 0.0      ; 0.0     ; -54.628             ;
+;  CLOCK_50                     ; -88.699  ; -1.721 ; N/A      ; N/A     ; -27.063             ;
+;  FSM:comb_7|state.DELAY       ; -2.975   ; 0.000  ; N/A      ; N/A     ; 0.000               ;
+;  divider_50000:comb_3|out_clk ; -127.034 ; 0.000  ; N/A      ; N/A     ; -27.565             ;
++-------------------------------+----------+--------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -638,8 +655,13 @@ No synchronizer chains to report.
 +------------------------------+------------------------------+----------+----------+----------+----------+
 ; From Clock                   ; To Clock                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
-; CLOCK_50                     ; CLOCK_50                     ; 435      ; 0        ; 0        ; 0        ;
-; divider_50000:comb_3|out_clk ; divider_50000:comb_3|out_clk ; 405      ; 0        ; 0        ; 0        ;
+; CLOCK_50                     ; CLOCK_50                     ; 716      ; 0        ; 0        ; 0        ;
+; divider_50000:comb_3|out_clk ; CLOCK_50                     ; 17       ; 17       ; 0        ; 0        ;
+; CLOCK_50                     ; divider_50000:comb_3|out_clk ; 11       ; 0        ; 0        ; 0        ;
+; divider_50000:comb_3|out_clk ; divider_50000:comb_3|out_clk ; 2261     ; 0        ; 0        ; 0        ;
+; FSM:comb_7|state.DELAY       ; divider_50000:comb_3|out_clk ; 2        ; 15       ; 0        ; 0        ;
+; divider_50000:comb_3|out_clk ; FSM:comb_7|state.DELAY       ; 0        ; 0        ; 3        ; 0        ;
+; FSM:comb_7|state.DELAY       ; FSM:comb_7|state.DELAY       ; 0        ; 0        ; 1        ; 1        ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -649,8 +671,13 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------+------------------------------+----------+----------+----------+----------+
 ; From Clock                   ; To Clock                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
-; CLOCK_50                     ; CLOCK_50                     ; 435      ; 0        ; 0        ; 0        ;
-; divider_50000:comb_3|out_clk ; divider_50000:comb_3|out_clk ; 405      ; 0        ; 0        ; 0        ;
+; CLOCK_50                     ; CLOCK_50                     ; 716      ; 0        ; 0        ; 0        ;
+; divider_50000:comb_3|out_clk ; CLOCK_50                     ; 17       ; 17       ; 0        ; 0        ;
+; CLOCK_50                     ; divider_50000:comb_3|out_clk ; 11       ; 0        ; 0        ; 0        ;
+; divider_50000:comb_3|out_clk ; divider_50000:comb_3|out_clk ; 2261     ; 0        ; 0        ; 0        ;
+; FSM:comb_7|state.DELAY       ; divider_50000:comb_3|out_clk ; 2        ; 15       ; 0        ; 0        ;
+; divider_50000:comb_3|out_clk ; FSM:comb_7|state.DELAY       ; 0        ; 0        ; 3        ; 0        ;
+; FSM:comb_7|state.DELAY       ; FSM:comb_7|state.DELAY       ; 0        ; 0        ; 1        ; 1        ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -675,9 +702,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 2     ; 2    ;
-; Unconstrained Output Ports      ; 24    ; 24   ;
-; Unconstrained Output Port Paths ; 117   ; 117  ;
+; Unconstrained Input Port Paths  ; 3     ; 3    ;
+; Unconstrained Output Ports      ; 42    ; 42   ;
+; Unconstrained Output Port Paths ; 397   ; 397  ;
 +---------------------------------+-------+------+
 
 
@@ -687,6 +714,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Target                       ; Clock                        ; Type ; Status      ;
 +------------------------------+------------------------------+------+-------------+
 ; CLOCK_50                     ; CLOCK_50                     ; Base ; Constrained ;
+; FSM:comb_7|state.DELAY       ; FSM:comb_7|state.DELAY       ; Base ; Constrained ;
 ; divider_50000:comb_3|out_clk ; divider_50000:comb_3|out_clk ; Base ; Constrained ;
 +------------------------------+------------------------------+------+-------------+
 
@@ -719,6 +747,24 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -760,6 +806,24 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -779,114 +843,128 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Thu Nov 24 18:00:28 2016
+    Info: Processing started: Fri Dec 09 11:55:36 2016
 Info: Command: quartus_sta EX8_top -c EX8_top
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'EX8_top.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name divider_50000:comb_3|out_clk divider_50000:comb_3|out_clk
     Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+    Info (332105): create_clock -period 1.000 -name divider_50000:comb_3|out_clk divider_50000:comb_3|out_clk
+    Info (332105): create_clock -period 1.000 -name FSM:comb_7|state.DELAY FSM:comb_7|state.DELAY
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.408
+Info (332146): Worst-case setup slack is -3.855
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.408             -58.805 divider_50000:comb_3|out_clk 
-    Info (332119):    -2.232             -44.820 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.298
+    Info (332119):    -3.855            -126.283 divider_50000:comb_3|out_clk 
+    Info (332119):    -2.975              -2.975 FSM:comb_7|state.DELAY 
+    Info (332119):    -2.640             -88.699 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.231
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.298               0.000 divider_50000:comb_3|out_clk 
-    Info (332119):     0.403               0.000 CLOCK_50 
+    Info (332119):     0.231               0.000 CLOCK_50 
+    Info (332119):     0.291               0.000 divider_50000:comb_3|out_clk 
+    Info (332119):     0.759               0.000 FSM:comb_7|state.DELAY 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.629
+Info (332146): Worst-case minimum pulse width slack is -0.671
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.629             -16.084 CLOCK_50 
-    Info (332119):    -0.394             -18.313 divider_50000:comb_3|out_clk 
+    Info (332119):    -0.671             -27.063 CLOCK_50 
+    Info (332119):    -0.394             -27.565 divider_50000:comb_3|out_clk 
+    Info (332119):     0.445               0.000 FSM:comb_7|state.DELAY 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.482
+Info (332146): Worst-case setup slack is -3.945
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.482             -45.123 CLOCK_50 
-    Info (332119):    -2.330             -57.072 divider_50000:comb_3|out_clk 
-Info (332146): Worst-case hold slack is 0.283
+    Info (332119):    -3.945            -127.034 divider_50000:comb_3|out_clk 
+    Info (332119):    -2.943              -2.943 FSM:comb_7|state.DELAY 
+    Info (332119):    -2.652             -82.643 CLOCK_50 
+Info (332146): Worst-case hold slack is -0.106
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.283               0.000 divider_50000:comb_3|out_clk 
-    Info (332119):     0.396               0.000 CLOCK_50 
+    Info (332119):    -0.106              -1.721 CLOCK_50 
+    Info (332119):     0.288               0.000 divider_50000:comb_3|out_clk 
+    Info (332119):     0.817               0.000 FSM:comb_7|state.DELAY 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.704
+Info (332146): Worst-case minimum pulse width slack is -0.715
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.704             -14.798 CLOCK_50 
-    Info (332119):    -0.394             -18.026 divider_50000:comb_3|out_clk 
+    Info (332119):    -0.715             -24.630 CLOCK_50 
+    Info (332119):    -0.394             -27.024 divider_50000:comb_3|out_clk 
+    Info (332119):     0.449               0.000 FSM:comb_7|state.DELAY 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.079
+Info (332146): Worst-case setup slack is -2.263
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.079             -26.331 divider_50000:comb_3|out_clk 
-    Info (332119):    -1.016             -16.602 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.107
+    Info (332119):    -2.263             -54.145 CLOCK_50 
+    Info (332119):    -1.823             -59.927 divider_50000:comb_3|out_clk 
+    Info (332119):    -1.517              -1.517 FSM:comb_7|state.DELAY 
+Info (332146): Worst-case hold slack is 0.098
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.107               0.000 divider_50000:comb_3|out_clk 
-    Info (332119):     0.217               0.000 CLOCK_50 
+    Info (332119):     0.098               0.000 divider_50000:comb_3|out_clk 
+    Info (332119):     0.134               0.000 CLOCK_50 
+    Info (332119):     0.395               0.000 FSM:comb_7|state.DELAY 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.787
+Info (332146): Worst-case minimum pulse width slack is -0.797
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.787             -11.720 CLOCK_50 
-    Info (332119):     0.117               0.000 divider_50000:comb_3|out_clk 
+    Info (332119):    -0.797             -18.836 CLOCK_50 
+    Info (332119):    -0.021              -0.361 divider_50000:comb_3|out_clk 
+    Info (332119):     0.475               0.000 FSM:comb_7|state.DELAY 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.975
+Info (332146): Worst-case setup slack is -1.774
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.975             -13.711 CLOCK_50 
-    Info (332119):    -0.943             -22.319 divider_50000:comb_3|out_clk 
-Info (332146): Worst-case hold slack is 0.092
+    Info (332119):    -1.774             -43.886 CLOCK_50 
+    Info (332119):    -1.727             -54.795 divider_50000:comb_3|out_clk 
+    Info (332119):    -1.380              -1.380 FSM:comb_7|state.DELAY 
+Info (332146): Worst-case hold slack is 0.084
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.092               0.000 divider_50000:comb_3|out_clk 
-    Info (332119):     0.200               0.000 CLOCK_50 
+    Info (332119):     0.084               0.000 divider_50000:comb_3|out_clk 
+    Info (332119):     0.105               0.000 CLOCK_50 
+    Info (332119):     0.379               0.000 FSM:comb_7|state.DELAY 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.842
+Info (332146): Worst-case minimum pulse width slack is -0.836
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.842             -13.955 CLOCK_50 
-    Info (332119):     0.129               0.000 divider_50000:comb_3|out_clk 
+    Info (332119):    -0.836             -22.347 CLOCK_50 
+    Info (332119):     0.018               0.000 divider_50000:comb_3|out_clk 
+    Info (332119):     0.483               0.000 FSM:comb_7|state.DELAY 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1213 megabytes
-    Info: Processing ended: Thu Nov 24 18:00:38 2016
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:07
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 1216 megabytes
+    Info: Processing ended: Fri Dec 09 11:55:45 2016
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:06
 
 

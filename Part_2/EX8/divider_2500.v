@@ -2,7 +2,7 @@
 module divider_2500 (enable, clk, out_clk);
 	input clk, enable;
 	output out_clk;
-	parameter max_value = 2500;
+	parameter max_value = 999;
 	reg [15:0] count;
 	reg out_clk;
 
