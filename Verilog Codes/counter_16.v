@@ -14,10 +14,13 @@ module counter_16 (clock, enable, count, reset);
 
 	initial count = 0;
 
-	always @ (posedge clock)
+	
+	always @ (posedge clock) begin
 		if (reset == 1'b1)
 			count <= 0;
-		if(enable == 1'b1)
-			count <= count + 1'b1;
 
+		if (enable == 1'b1)
+			count <= count + 1'b1;
+	end
+			
 endmodule // counter_16

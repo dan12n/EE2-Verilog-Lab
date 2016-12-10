@@ -1,28 +1,43 @@
-module pulse_gen (pulse, in, clk)
-	input in, clk;
-	output out;
-	parameter N_STATE = 3; //This is the max number, but only three are used
-	reg [1:0] state;
-	reg pulse;
+//------------------------------
+// Module name: pulse_gen (Moore)
+// Function: Generate one clock pulse on +ve edge of input
+// Creator:  Peter Cheung
+// Version:  1.0
+// Date:     29 Jan 2014
+//------------------------------
+
+module pulse_gen(pulse, in, clk);
+
+	output 			pulse;	// output pulse lasting one clk cycle
+	input 			in;		// input, +ve edge to be detected
+	input 			clk;		// clock signal
+
+	reg [1:0]	state;
+	reg	pulse;
 	
-	parameter IDLE = 2'b00;
-	parameter IN_HIGH = 2'b01;
-	parameter WAIT_LOW = 2'b10;
+	parameter	IDLE = 2'b0;	// state coding for IDLE state
+	parameter	IN_HIGH = 2'b01;
+	parameter	WAIT_LOW = 2'b10;  
 	
 	initial state = IDLE;
-	initial pulse = 1'b0;
 	
-	always @(posedge clk)
-		case (state)
-			IDLE: if (in == 1'b1) state <= IN_HIGH;
-			IN_HIGH: if (in == 1'b1) state <= IDLE;
-						else state <= WAIT_LOW;
-			default : ;
-		endcase
-		
-	always @ (*)
-		case (state)
-			IDLE: out = 1'b0;
-			IN_HIGH: out = 1'b1;
-			WAIT_LOW: out = 1'b0;
-		endcase
+	always @ (posedge clk) 
+		begin	
+			pulse <= 0;		 // default output
+			case (state)
+			IDLE: 	if (in == 1'b1) begin
+							state <= IN_HIGH;	pulse <= 1'b1; end
+						else 
+							state <= IDLE; 
+			IN_HIGH: if (in == 1'b1) 
+							state <= WAIT_LOW;
+						else 
+							state <= IDLE; 
+			WAIT_LOW: if (in == 1'b1) 
+							state <= WAIT_LOW;
+						 else  
+							state <= IDLE;
+			default: ;
+			endcase
+		end			//... always
+endmodule

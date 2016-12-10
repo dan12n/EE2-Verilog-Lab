@@ -1,7 +1,7 @@
 module hex_to_7seg (out, in);
 	output [6:0] out;
 	input [3:0] in;
-
+	//Output is set as a register to assign the output in an always block
 	reg [6:0] out;
 
 	always @ (*)
