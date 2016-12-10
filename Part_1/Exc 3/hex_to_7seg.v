@@ -1,7 +1,7 @@
 module hex_to_7seg (out, in);
 	output [6:0] out;
 	input [3:0] in;
-
+	//Register Output
 	reg [6:0] out;
 
 	always @ (*)

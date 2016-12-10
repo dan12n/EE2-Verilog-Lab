@@ -1,7 +1,7 @@
 module b_to_bcd (B, BCD_0, BCD_1, BCD_2, BCD_3);
-	input [9:0]	B;		// binary input number
+	input [9:0]	B;		// Binary input number
 	output [3:0] BCD_0, BCD_1, BCD_2, BCD_3;   // BCD digit LSD to MSD
-	            	                                     // 
+	            	                                     
 	wire [3:0] w1, w2, w3, w4, w5, w6, w7, w8, w9, w10, w11, w12;
 	wire [3:0] a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12;
 

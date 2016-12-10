@@ -23,11 +23,11 @@ module ex16_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 	input 		ADC_SDO;			//Converted serial data from ADC	
 	output		PWM_OUT;			// PWM output to R channel
 		
-	wire			tick_10k;		// internal clock at 10kHz
+	wire		tick_10k;		// internal clock at 10kHz
 	wire [9:0] 	data_in;		// converted data from ADC
 	wire [9:0] 	data_out;	// processed data to DAC
-	wire			data_valid;
-	wire			DAC_SCK, ADC_SCK;
+	wire		data_valid;
+	wire		DAC_SCK, ADC_SCK;
 	
 	clktick_16  GEN_10K (CLOCK_50, 1'b1, 16'd4999, tick_10k);  	// generate 10KHz sampling clock ticks
 	spi2dac SPI_DAC (CLOCK_50, data_out, tick_10k, 		// send processed sample to DAC
@@ -45,11 +45,11 @@ module ex16_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 		.adc_sck (ADC_SCK),
 		.sdata_from_adc (ADC_SDO));		
 					
-	processor	mult_4 (CLOCK_50, data_in, data_out);	// do some processing on the data
+	processor		mult_4 (.sysclk(CLOCK_50), .data_in(data_in), .data_out(data_out));	// do some processing on the data
 	
-	hex_to_7seg		SEG0 (HEX0, data_in[3:0]);			
-	hex_to_7seg		SEG1 (HEX1, data_in[7:4]);			
-	hex_to_7seg		SEG2 (HEX2, {2'b0,data_in[9:8]});			
+	hex_to_7seg		SEG0 (.out(HEX0), .in(data_in[3:0]));			
+	hex_to_7seg		SEG1 (.out(HEX1), .in(data_in[7:4]));			
+	hex_to_7seg		SEG2 (.out(HEX2), .in({2'b0,data_in[9:8]}));			
 		
 endmodule
 

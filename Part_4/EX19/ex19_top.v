@@ -50,15 +50,17 @@ module ex19_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 		.sdata_from_adc (ADC_SDO));		
 	
 
-	pulse_gen(pulse, data_valid, CLOCK_50);	
-	processor	all_pass (CLOCK_50, data_in, data_out, pulse, tick_10k, data_valid, SW[8:0]);	// do some processing on the data
+	pulse_gen 		generate_pulse (.pulse(pulse), .in(data_valid), .clk(CLOCK_50));
+	processor		all_pass (.sysclk(CLOCK_50), .data_in(data_in), .data_out(data_out), .enable(pulse), 
+							  .tick_10k(tick_10k), .data_valid(data_valid), .SW(SW[8:0]) 				);
 	
-	multiplier(SW[8:0], DELAY[19:0]);
-	bin2bcd_16 (DELAY[19:10], BCD_0[3:0], BCD_1[3:0], BCD_2[3:0], BCD_3[3:0], BCD_4[3:0]);
+
+	multiplier 		mul_switches (.dataa(SW[8:0]), .result(DELAY[19:0]));
+	bin2bcd_16 		bin2bcd (.B(DELAY[19:10]), .BCD_0(BCD_0[3:0]), .BCD_1(BCD_1[3:0]), .BCD_2(BCD_2[3:0]), .BCD_3(BCD_3[3:0]), .BCD_4(BCD_4[3:0]));
 	
-	hex_to_7seg		SEG0 (HEX0, BCD_0[3:0]);			
-	hex_to_7seg		SEG1 (HEX1, BCD_1[3:0]);			
-	hex_to_7seg		SEG2 (HEX2, BCD_2[3:0]);
+	hex_to_7seg		SEG0 (.out(HEX0), .in(BCD_0[3:0]));
+	hex_to_7seg		SEG1 (.out(HEX1), .in(BCD_1[3:0]));
+	hex_to_7seg		SEG2 (.out(HEX2), .in(BCD_2[3:0]));
 	
 		
 endmodule

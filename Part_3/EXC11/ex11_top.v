@@ -1,14 +1,14 @@
-module ex11_top (SW, CLOCK_50, DAC_CS, DAC_SDI, DAC_LD, DAC_SCK);
+module ex11_top (SW, CLOCK_50, DAC_CS, DAC_SDI, DAC_LD, DAC_SCK, PWM_OUT);
 	input[9:0] SW;
 	input CLOCK_50;
 	output DAC_CS, DAC_SDI, DAC_LD, DAC_SCK;
 	wire clk_div;
-	wire pwm_out;
+	output PWM_OUT;
 	
-	divider_50000(CLOCK_50, clk_div);
+	divider_50000	divideby5000 	(CLOCK_50, clk_div);
 	
-	spi2dac (CLOCK_50, SW[9:0], clk_div, DAC_SDI, DAC_CS, DAC_SCk, DAC_LD);
+	spi2dac 		dac 			(CLOCK_50, SW[9:0], clk_div, DAC_SDI, DAC_CS, DAC_SCK, DAC_LD);
 	
-	pwm(CLOCK_50, SW[9:0], clk_div, pwm_out);
+	pwm      		pulsewidth		(CLOCK_50, SW[9:0], clk_div, PWM_OUT);
 	
 endmodule

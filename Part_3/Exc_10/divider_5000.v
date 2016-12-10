@@ -9,13 +9,13 @@ module divider_50000 (clk, out_clk);
 	initial out_clk = 1'b0;
 	
 	always @(posedge clk)
-	if (count == 10'b0) begin
+	if (count == 10'b0) 	begin
 		out_clk <= 1'b1;
 		count <= max_value;
-		end
+							end
 		
-	else begin
+	else 					begin
 		count <= count - 1'b1;
 		out_clk <= 1'b0;
-	end
+							end
 endmodule // divider_50000

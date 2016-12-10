@@ -1,3 +1,4 @@
+//Purpose of creating a new module was to ensure that false values are not passed
 module dec_to_7seg (out, in);
 	output [6:0] out;
 	input [3:0] in;

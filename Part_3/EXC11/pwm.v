@@ -9,11 +9,14 @@ module pwm (clk, data_in, load, pwm_out);
 	reg pwm_out;
 	
 	
+	//PWM is zero by default, with load not asserted
 	always@(posedge clk)
 		if (load == 1'b1) d <= data_in;
 		
-	initial count = 10'b0;
+	initial count = 10'd0;
 	
+
+	//Increments count till it reached data_in, and then sets PWM to zero, for one clock cycle
 	always@(posedge clk)
 		begin
 			count <=  count + 1'b1;

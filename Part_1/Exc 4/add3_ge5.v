@@ -6,7 +6,7 @@ module add3_ge5 (in, out); //W1 is input, and A1 is output
 	
 	always @(*)
 		case (in)
-		//IF not greater than five
+		//If not greater than five
 		 4'b0000: out <= 4'b0000;
 		 4'b0001: out <= 4'b0001;
 		 4'b0010: out <= 4'b0010;

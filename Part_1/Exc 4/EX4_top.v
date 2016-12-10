@@ -1,10 +1,10 @@
 module EX4_top (SW, HEX0, HEX1, HEX2);
-	input [9:0] SW;
+	input [9:0] SW;		//Input Switches
 	output [6:0] HEX0;
 	output [6:0] HEX1;
 	output [6:0] HEX2;
 
-	wire[3:0] BCD0;
+	wire[3:0] BCD0; //Binary convered to BCD values, to be displayed on the Seven Segment Display
 	wire[3:0] BCD1;
 	wire[3:0] BCD2;
 	wire[3:0] BCD3;

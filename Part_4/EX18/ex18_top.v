@@ -48,12 +48,12 @@ module ex18_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 		.sdata_from_adc (ADC_SDO));		
 	
 
-	pulse_gen(pulse, data_valid, CLOCK_50);	
-	processor	all_pass (CLOCK_50, data_in, data_out, pulse, tick_10k, pulse);	// do some processing on the data
+	pulse_gen 		generate_pulse (.pulse(pulse), .in(data_valid), .clk(CLOCK_50));	
+	processor		all_pass (.sysclk(CLOCK_50), .data_in(data_in), .data_out(data_out), .wrreq(pulse), .tick_10k(tick_10k), .pulse(pulse));
 
 
-	hex_to_7seg		SEG0 (HEX0, data_in[3:0]);			
-	hex_to_7seg		SEG1 (HEX1, data_in[7:4]);			
-	hex_to_7seg		SEG2 (HEX2, {2'b0,data_in[9:8]});			
+	hex_to_7seg		SEG0 (.out(HEX0), .in(data_in[3:0]));			
+	hex_to_7seg		SEG1 (.out(HEX1), .in(data_in[7:4]));			
+	hex_to_7seg		SEG2 (.out(HEX2), .in({2'b0,data_in[9:8]}));				
 		
 endmodule
