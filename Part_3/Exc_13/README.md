@@ -12,4 +12,4 @@ The first step was to reduce the frequency to 10KHz as this would act as an enab
 
 ##Results and Conclusion:
 
-As can be seen above, a fixed frequency sinewave is the output we got from this exercise as is to be expected.The frequency of the produced sinewave is ...
+As can be seen above, a fixed frequency sinewave is the output we got from this exercise as is to be expected.
