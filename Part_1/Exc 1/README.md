@@ -11,19 +11,7 @@ The method used to complete this program was the schematic design method. This r
 
 
 ##Results and Conclusion:
-<table border="1">
-<tr>
-<td><center>Quartus provided the following results for 0 Degrees Slow: </td>
-<td>The following was the result for 85 Degrees Slow:</td>
-</tr>
-<tr>
-<td><img src= "https://cloud.githubusercontent.com/assets/17357371/20847289/50fcc14e-b8c5-11e6-825b-d4bbc3490c64.png" width=400px /> </td>
-<td><img src= "https://cloud.githubusercontent.com/assets/17357371/20847469/1fe6f40c-b8c6-11e6-8b5a-1b683aae34c0.png" width=400px /> </td>
-</tr>
-</table>
 
-As can be seen in the tables above, across all the delay measurements (rr, rf, fr, ff), the 85 degrees slow measurement is slower than the 0 degrees slow measurement by between 0.4 and 0.6 ns. This could be due to the fact that at higher temperatures, the resistance in the circuit should be higher making the process slower. 
-
-Furthermore, we saw that this implementation used very few resources (4 ALMs and 11 pins).
+We saw that this implementation used very few resources (4 ALMs and 11 pins).
 
 Finally, in terms of the actual output on the display, this was as expected. However it is important to note that due to the requirement of only out[4], this was implemented very quickly, but if all pins were required and we were not given the partially completed design, this would be very time-consuming and so the more efficient Verilog coding would be seen in Part 2.
