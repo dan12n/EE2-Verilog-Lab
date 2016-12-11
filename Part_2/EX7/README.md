@@ -10,7 +10,9 @@ Exercise 7 used the idea of PRBS using a 7 bit LFSR. The implementation of this 
 As the summary outlines, this task was merely the expansion of the 4 bit LFSR shown in the lectures to a 7 bit equivalent. As for the 10 values to be tested, these had to be worked out manually. The taps would be at Q1 and Q7 when taking the lecture notes example explanation into account. This meant a sequence of:
 
 0 0 0 0 0 0 1
+
 0 0 0 0 0 1 1
+
 0 0 0 0 1 1 1
 0 0 0 1 1 1 1
 0 0 1 1 1 1 1
