@@ -1,8 +1,8 @@
 //Clock divider
-module divider_50000 (clk, out_clk);
+module divider_5000 (clk, out_clk);
 	input clk;
 	output out_clk;
-	parameter max_value = 50000;
+	parameter max_value = 5000;
 	reg [15:0] count;
 	reg out_clk;
 
