@@ -14,12 +14,19 @@ As the summary outlines, this task was merely the expansion of the 4 bit LFSR sh
 0 0 0 0 0 1 1
 
 0 0 0 0 1 1 1
+
 0 0 0 1 1 1 1
+
 0 0 1 1 1 1 1
+
 0 1 1 1 1 1 1
+
 1 1 1 1 1 1 1
+
 1 1 1 1 1 1 0
+
 1 1 1 1 1 0 1
+
 1 1 1 1 0 1 0
 
 And these are the values we alternated through everytime we pressed the key.
