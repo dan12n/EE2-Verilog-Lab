@@ -1,5 +1,5 @@
 Assembler report for ex15_top
-Thu Dec 08 16:19:21 2016
+Mon Dec 12 09:28:31 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.sof
+  5. Assembler Device Options: C:/EE2-Verilog-Lab/Part_3/EX15/ex15_top.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Dec 08 16:19:21 2016 ;
+; Assembler Status      ; Successful - Mon Dec 12 09:28:31 2016 ;
 ; Revision Name         ; ex15_top                              ;
 ; Top-level Entity Name ; ex15_top                              ;
 ; Family                ; Cyclone V                             ;
@@ -53,24 +53,24 @@ agreement for further details.
 +--------+---------+---------------+
 
 
-+----------------------------------------------------------------+
-; Assembler Generated Files                                      ;
-+----------------------------------------------------------------+
-; File Name                                                      ;
-+----------------------------------------------------------------+
-; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.sof ;
-+----------------------------------------------------------------+
++---------------------------------------------+
+; Assembler Generated Files                   ;
++---------------------------------------------+
+; File Name                                   ;
++---------------------------------------------+
+; C:/EE2-Verilog-Lab/Part_3/EX15/ex15_top.sof ;
++---------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Assembler Device Options: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_3/EX15/ex15_top.sof ;
-+----------------+-------------------------------------------------------------------------+
-; Option         ; Setting                                                                 ;
-+----------------+-------------------------------------------------------------------------+
-; Device         ; 5CSEMA5F31C6                                                            ;
-; JTAG usercode  ; 0x00B1C4B2                                                              ;
-; Checksum       ; 0x00B1C4B2                                                              ;
-+----------------+-------------------------------------------------------------------------+
++-----------------------------------------------------------------------+
+; Assembler Device Options: C:/EE2-Verilog-Lab/Part_3/EX15/ex15_top.sof ;
++----------------+------------------------------------------------------+
+; Option         ; Setting                                              ;
++----------------+------------------------------------------------------+
+; Device         ; 5CSEMA5F31C6                                         ;
+; JTAG usercode  ; 0x00B1C4B2                                           ;
+; Checksum       ; 0x00B1C4B2                                           ;
++----------------+------------------------------------------------------+
 
 
 +--------------------+
@@ -79,14 +79,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Thu Dec 08 16:19:10 2016
+    Info: Processing started: Mon Dec 12 09:28:25 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ex15_top -c ex15_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 894 megabytes
-    Info: Processing ended: Thu Dec 08 16:19:21 2016
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 891 megabytes
+    Info: Processing ended: Mon Dec 12 09:28:31 2016
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 

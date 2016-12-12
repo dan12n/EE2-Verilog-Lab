@@ -64,8 +64,8 @@ module FSM (clk, tick, trigger, time_out, en_lfsr, start_delay, ledr);
 			TENTH_LED		: begin ledr[9:0] 	= 10'b1111111111;
 									start_delay = 1'b1;					//Starts the delay state
 									en_lfsr 	= 1'b0; 			end
-			DELAY 			: begin ledr[9:0] 	= 10'b1111111111;
-			TURNOFF 		: begin	ledr[9:0] 	= 10'b0000000000;
+			DELAY 			: ledr[9:0] 	= 10'b1111111111;
+			TURNOFF 			: begin	ledr[9:0] 	= 10'b0000000000;
 									start_delay = 1'b0; 			end
 			default: ;
 	endcase

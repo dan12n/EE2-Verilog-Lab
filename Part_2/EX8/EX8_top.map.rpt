@@ -1,5 +1,5 @@
 Analysis & Synthesis report for EX8_top
-Fri Dec 09 18:00:25 2016
+Mon Dec 12 11:45:42 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -13,19 +13,19 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |EX8_top|FSM:comb_7|state
+  8. State Machine - |EX8_top|FSM:finitestatem|state
   9. User-Specified and Inferred Latches
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: divider_50000:comb_3
- 15. Parameter Settings for User Entity Instance: divider_2500:comb_4
- 16. Parameter Settings for User Entity Instance: FSM:comb_7
- 17. Port Connectivity Checks: "bin2bcd_16:comb_9|add3_ge5:A18"
- 18. Port Connectivity Checks: "bin2bcd_16:comb_9|add3_ge5:A9"
- 19. Port Connectivity Checks: "bin2bcd_16:comb_9|add3_ge5:A3"
- 20. Port Connectivity Checks: "bin2bcd_16:comb_9"
+ 14. Parameter Settings for User Entity Instance: divider_50000:divideby5000
+ 15. Parameter Settings for User Entity Instance: divider_2500:divideby2500
+ 16. Parameter Settings for User Entity Instance: FSM:finitestatem
+ 17. Port Connectivity Checks: "bin2bcd_16:bin2bcd|add3_ge5:A18"
+ 18. Port Connectivity Checks: "bin2bcd_16:bin2bcd|add3_ge5:A9"
+ 19. Port Connectivity Checks: "bin2bcd_16:bin2bcd|add3_ge5:A3"
+ 20. Port Connectivity Checks: "bin2bcd_16:bin2bcd"
  21. Post-Synthesis Netlist Statistics for Top Partition
  22. Elapsed Time Per Partition
  23. Analysis & Synthesis Messages
@@ -56,7 +56,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Dec 09 18:00:24 2016           ;
+; Analysis & Synthesis Status     ; Successful - Mon Dec 12 11:45:42 2016           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; EX8_top                                         ;
 ; Top-level Entity Name           ; EX8_top                                         ;
@@ -181,95 +181,95 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
-; hex_to_7seg.v                    ; yes             ; User Verilog HDL File  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/hex_to_7seg.v   ;         ;
-; FSM.v                            ; yes             ; User Verilog HDL File  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/FSM.v           ;         ;
-; EX8_top.v                        ; yes             ; User Verilog HDL File  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v       ;         ;
-; divider_50000.v                  ; yes             ; User Verilog HDL File  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/divider_50000.v ;         ;
-; divider_2500.v                   ; yes             ; User Verilog HDL File  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/divider_2500.v  ;         ;
-; delay.v                          ; yes             ; User Verilog HDL File  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/delay.v         ;         ;
-; LFSR.v                           ; yes             ; User Verilog HDL File  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/LFSR.v          ;         ;
-; b_to_bcd.v                       ; yes             ; User Verilog HDL File  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/b_to_bcd.v      ;         ;
-; add3_ge5.v                       ; yes             ; User Verilog HDL File  ; //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/add3_ge5.v      ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                  ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; hex_to_7seg.v                    ; yes             ; User Verilog HDL File  ; C:/EE2-Verilog-Lab/Part_2/EX8/hex_to_7seg.v   ;         ;
+; FSM.v                            ; yes             ; User Verilog HDL File  ; C:/EE2-Verilog-Lab/Part_2/EX8/FSM.v           ;         ;
+; EX8_top.v                        ; yes             ; User Verilog HDL File  ; C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v       ;         ;
+; divider_50000.v                  ; yes             ; User Verilog HDL File  ; C:/EE2-Verilog-Lab/Part_2/EX8/divider_50000.v ;         ;
+; divider_2500.v                   ; yes             ; User Verilog HDL File  ; C:/EE2-Verilog-Lab/Part_2/EX8/divider_2500.v  ;         ;
+; delay.v                          ; yes             ; User Verilog HDL File  ; C:/EE2-Verilog-Lab/Part_2/EX8/delay.v         ;         ;
+; LFSR.v                           ; yes             ; User Verilog HDL File  ; C:/EE2-Verilog-Lab/Part_2/EX8/LFSR.v          ;         ;
+; b_to_bcd.v                       ; yes             ; User Verilog HDL File  ; C:/EE2-Verilog-Lab/Part_2/EX8/b_to_bcd.v      ;         ;
+; add3_ge5.v                       ; yes             ; User Verilog HDL File  ; C:/EE2-Verilog-Lab/Part_2/EX8/add3_ge5.v      ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                ;
-+---------------------------------------------+------------------------------+
-; Resource                                    ; Usage                        ;
-+---------------------------------------------+------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 113                          ;
-;                                             ;                              ;
-; Combinational ALUT usage for logic          ; 205                          ;
-;     -- 7 input functions                    ; 0                            ;
-;     -- 6 input functions                    ; 18                           ;
-;     -- 5 input functions                    ; 8                            ;
-;     -- 4 input functions                    ; 96                           ;
-;     -- <=3 input functions                  ; 83                           ;
-;                                             ;                              ;
-; Dedicated logic registers                   ; 75                           ;
-;                                             ;                              ;
-; I/O pins                                    ; 50                           ;
-;                                             ;                              ;
-; Total DSP Blocks                            ; 0                            ;
-;                                             ;                              ;
-; Maximum fan-out node                        ; divider_50000:comb_3|out_clk ;
-; Maximum fan-out                             ; 58                           ;
-; Total fan-out                               ; 1026                         ;
-; Average fan-out                             ; 2.70                         ;
-+---------------------------------------------+------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                      ;
++---------------------------------------------+------------------------------------+
+; Resource                                    ; Usage                              ;
++---------------------------------------------+------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 119                                ;
+;                                             ;                                    ;
+; Combinational ALUT usage for logic          ; 214                                ;
+;     -- 7 input functions                    ; 0                                  ;
+;     -- 6 input functions                    ; 20                                 ;
+;     -- 5 input functions                    ; 9                                  ;
+;     -- 4 input functions                    ; 98                                 ;
+;     -- <=3 input functions                  ; 87                                 ;
+;                                             ;                                    ;
+; Dedicated logic registers                   ; 75                                 ;
+;                                             ;                                    ;
+; I/O pins                                    ; 50                                 ;
+;                                             ;                                    ;
+; Total DSP Blocks                            ; 0                                  ;
+;                                             ;                                    ;
+; Maximum fan-out node                        ; divider_50000:divideby5000|out_clk ;
+; Maximum fan-out                             ; 58                                 ;
+; Total fan-out                               ; 1036                               ;
+; Average fan-out                             ; 2.66                               ;
++---------------------------------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name   ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+---------------+--------------+
-; |EX8_top                   ; 205 (0)           ; 75 (0)       ; 0                 ; 0          ; 50   ; 0            ; |EX8_top                                ; EX8_top       ; work         ;
-;    |EX8_delay:comb_6|      ; 36 (36)           ; 14 (14)      ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|EX8_delay:comb_6               ; EX8_delay     ; work         ;
-;    |FSM:comb_7|            ; 18 (18)           ; 13 (13)      ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|FSM:comb_7                     ; FSM           ; work         ;
-;    |bin2bcd_16:comb_9|     ; 75 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9              ; bin2bcd_16    ; work         ;
-;       |add3_ge5:A10|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A10 ; add3_ge5      ; work         ;
-;       |add3_ge5:A11|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A11 ; add3_ge5      ; work         ;
-;       |add3_ge5:A13|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A13 ; add3_ge5      ; work         ;
-;       |add3_ge5:A14|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A14 ; add3_ge5      ; work         ;
-;       |add3_ge5:A15|       ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A15 ; add3_ge5      ; work         ;
-;       |add3_ge5:A16|       ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A16 ; add3_ge5      ; work         ;
-;       |add3_ge5:A17|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A17 ; add3_ge5      ; work         ;
-;       |add3_ge5:A19|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A19 ; add3_ge5      ; work         ;
-;       |add3_ge5:A20|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A20 ; add3_ge5      ; work         ;
-;       |add3_ge5:A21|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A21 ; add3_ge5      ; work         ;
-;       |add3_ge5:A23|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A23 ; add3_ge5      ; work         ;
-;       |add3_ge5:A24|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A24 ; add3_ge5      ; work         ;
-;       |add3_ge5:A25|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A25 ; add3_ge5      ; work         ;
-;       |add3_ge5:A26|       ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A26 ; add3_ge5      ; work         ;
-;       |add3_ge5:A27|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A27 ; add3_ge5      ; work         ;
-;       |add3_ge5:A28|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A28 ; add3_ge5      ; work         ;
-;       |add3_ge5:A29|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A29 ; add3_ge5      ; work         ;
-;       |add3_ge5:A2|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A2  ; add3_ge5      ; work         ;
-;       |add3_ge5:A4|        ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A4  ; add3_ge5      ; work         ;
-;       |add3_ge5:A6|        ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A6  ; add3_ge5      ; work         ;
-;       |add3_ge5:A7|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A7  ; add3_ge5      ; work         ;
-;       |add3_ge5:A8|        ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:comb_9|add3_ge5:A8  ; add3_ge5      ; work         ;
-;    |divider_2500:comb_4|   ; 20 (20)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|divider_2500:comb_4            ; divider_2500  ; work         ;
-;    |divider_50000:comb_3|  ; 20 (20)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|divider_50000:comb_3           ; divider_50000 ; work         ;
-;    |hex_to_7seg:comb_10|   ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|hex_to_7seg:comb_10            ; hex_to_7seg   ; work         ;
-;    |hex_to_7seg:comb_11|   ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|hex_to_7seg:comb_11            ; hex_to_7seg   ; work         ;
-;    |hex_to_7seg:comb_12|   ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|hex_to_7seg:comb_12            ; hex_to_7seg   ; work         ;
-;    |hex_to_7seg:comb_13|   ; 13 (13)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|hex_to_7seg:comb_13            ; hex_to_7seg   ; work         ;
-;    |lfsr13:comb_5|         ; 2 (2)             ; 14 (14)      ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|lfsr13:comb_5                  ; lfsr13        ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+---------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                 ;
++---------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name   ; Library Name ;
++---------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------+---------------+--------------+
+; |EX8_top                        ; 214 (0)           ; 75 (0)       ; 0                 ; 0          ; 50   ; 0            ; |EX8_top                                 ; EX8_top       ; work         ;
+;    |EX8_delay:delay|            ; 35 (35)           ; 14 (14)      ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|EX8_delay:delay                 ; EX8_delay     ; work         ;
+;    |FSM:finitestatem|           ; 19 (19)           ; 13 (13)      ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|FSM:finitestatem                ; FSM           ; work         ;
+;    |bin2bcd_16:bin2bcd|         ; 76 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd              ; bin2bcd_16    ; work         ;
+;       |add3_ge5:A10|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A10 ; add3_ge5      ; work         ;
+;       |add3_ge5:A11|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A11 ; add3_ge5      ; work         ;
+;       |add3_ge5:A13|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A13 ; add3_ge5      ; work         ;
+;       |add3_ge5:A14|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A14 ; add3_ge5      ; work         ;
+;       |add3_ge5:A15|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A15 ; add3_ge5      ; work         ;
+;       |add3_ge5:A16|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A16 ; add3_ge5      ; work         ;
+;       |add3_ge5:A17|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A17 ; add3_ge5      ; work         ;
+;       |add3_ge5:A19|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A19 ; add3_ge5      ; work         ;
+;       |add3_ge5:A20|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A20 ; add3_ge5      ; work         ;
+;       |add3_ge5:A21|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A21 ; add3_ge5      ; work         ;
+;       |add3_ge5:A23|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A23 ; add3_ge5      ; work         ;
+;       |add3_ge5:A24|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A24 ; add3_ge5      ; work         ;
+;       |add3_ge5:A25|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A25 ; add3_ge5      ; work         ;
+;       |add3_ge5:A26|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A26 ; add3_ge5      ; work         ;
+;       |add3_ge5:A27|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A27 ; add3_ge5      ; work         ;
+;       |add3_ge5:A28|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A28 ; add3_ge5      ; work         ;
+;       |add3_ge5:A29|            ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A29 ; add3_ge5      ; work         ;
+;       |add3_ge5:A2|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A2  ; add3_ge5      ; work         ;
+;       |add3_ge5:A4|             ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A4  ; add3_ge5      ; work         ;
+;       |add3_ge5:A6|             ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A6  ; add3_ge5      ; work         ;
+;       |add3_ge5:A7|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A7  ; add3_ge5      ; work         ;
+;       |add3_ge5:A8|             ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|bin2bcd_16:bin2bcd|add3_ge5:A8  ; add3_ge5      ; work         ;
+;    |divider_2500:divideby2500|  ; 21 (21)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|divider_2500:divideby2500       ; divider_2500  ; work         ;
+;    |divider_50000:divideby5000| ; 27 (27)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|divider_50000:divideby5000      ; divider_50000 ; work         ;
+;    |hex_to_7seg:seg0|           ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|hex_to_7seg:seg0                ; hex_to_7seg   ; work         ;
+;    |hex_to_7seg:seg1|           ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|hex_to_7seg:seg1                ; hex_to_7seg   ; work         ;
+;    |hex_to_7seg:seg2|           ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|hex_to_7seg:seg2                ; hex_to_7seg   ; work         ;
+;    |hex_to_7seg:seg3|           ; 13 (13)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|hex_to_7seg:seg3                ; hex_to_7seg   ; work         ;
+;    |lfsr13:LFSR|                ; 2 (2)             ; 14 (14)      ; 0                 ; 0          ; 0    ; 0            ; |EX8_top|lfsr13:LFSR                     ; lfsr13        ; work         ;
++---------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |EX8_top|FSM:comb_7|state                                                                                                                                                                                                             ;
+; State Machine - |EX8_top|FSM:finitestatem|state                                                                                                                                                                                                       ;
 +-------------------+-----------------+-------------+-----------------+------------------+---------------+-----------------+------------------+-----------------+-------------------+------------------+-----------------+-----------------+------------+
 ; Name              ; state.TENTH_LED ; state.DELAY ; state.NINTH_LED ; state.EIGHTH_LED ; state.TURNOFF ; state.FIFTH_LED ; state.FOURTH_LED ; state.SIXTH_LED ; state.SEVENTH_LED ; state.SECOND_LED ; state.THIRD_LED ; state.FIRST_LED ; state.IDLE ;
 +-------------------+-----------------+-------------+-----------------+------------------+---------------+-----------------+------------------+-----------------+-------------------+------------------+-----------------+-----------------+------------+
@@ -289,41 +289,41 @@ Encoding Type:  One-Hot
 +-------------------+-----------------+-------------+-----------------+------------------+---------------+-----------------+------------------+-----------------+-------------------+------------------+-----------------+-----------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; FSM:comb_7|en_lfsr                                 ; FSM:comb_7|WideOr8  ; yes                    ;
-; FSM:comb_7|start_delay                             ; FSM:comb_7|ledr[9]  ; yes                    ;
-; Number of user-specified and inferred latches = 2  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++----------------------------------------------------+--------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal      ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------+------------------------+
+; FSM:finitestatem|en_lfsr                           ; FSM:finitestatem|WideOr8 ; yes                    ;
+; FSM:finitestatem|start_delay                       ; FSM:finitestatem|WideOr9 ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                          ;                        ;
++----------------------------------------------------+--------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; lfsr13:comb_5|sreg[12]                 ; Merged with lfsr13:comb_5|data_out[11] ;
-; lfsr13:comb_5|sreg[11]                 ; Merged with lfsr13:comb_5|data_out[10] ;
-; lfsr13:comb_5|sreg[10]                 ; Merged with lfsr13:comb_5|data_out[9]  ;
-; lfsr13:comb_5|sreg[9]                  ; Merged with lfsr13:comb_5|data_out[8]  ;
-; lfsr13:comb_5|sreg[8]                  ; Merged with lfsr13:comb_5|data_out[7]  ;
-; lfsr13:comb_5|sreg[7]                  ; Merged with lfsr13:comb_5|data_out[6]  ;
-; lfsr13:comb_5|sreg[6]                  ; Merged with lfsr13:comb_5|data_out[5]  ;
-; lfsr13:comb_5|sreg[5]                  ; Merged with lfsr13:comb_5|data_out[4]  ;
-; lfsr13:comb_5|sreg[4]                  ; Merged with lfsr13:comb_5|data_out[3]  ;
-; lfsr13:comb_5|sreg[3]                  ; Merged with lfsr13:comb_5|data_out[2]  ;
-; lfsr13:comb_5|sreg[2]                  ; Merged with lfsr13:comb_5|data_out[1]  ;
-; lfsr13:comb_5|sreg[1]                  ; Merged with lfsr13:comb_5|data_out[0]  ;
-; FSM:comb_7|state~15                    ; Lost fanout                            ;
-; FSM:comb_7|state~16                    ; Lost fanout                            ;
-; FSM:comb_7|state~17                    ; Lost fanout                            ;
-; FSM:comb_7|state~18                    ; Lost fanout                            ;
-; Total Number of Removed Registers = 16 ;                                        ;
-+----------------------------------------+----------------------------------------+
++-------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                            ;
++----------------------------------------+--------------------------------------+
+; Register name                          ; Reason for Removal                   ;
++----------------------------------------+--------------------------------------+
+; lfsr13:LFSR|sreg[12]                   ; Merged with lfsr13:LFSR|data_out[11] ;
+; lfsr13:LFSR|sreg[11]                   ; Merged with lfsr13:LFSR|data_out[10] ;
+; lfsr13:LFSR|sreg[10]                   ; Merged with lfsr13:LFSR|data_out[9]  ;
+; lfsr13:LFSR|sreg[9]                    ; Merged with lfsr13:LFSR|data_out[8]  ;
+; lfsr13:LFSR|sreg[8]                    ; Merged with lfsr13:LFSR|data_out[7]  ;
+; lfsr13:LFSR|sreg[7]                    ; Merged with lfsr13:LFSR|data_out[6]  ;
+; lfsr13:LFSR|sreg[6]                    ; Merged with lfsr13:LFSR|data_out[5]  ;
+; lfsr13:LFSR|sreg[5]                    ; Merged with lfsr13:LFSR|data_out[4]  ;
+; lfsr13:LFSR|sreg[4]                    ; Merged with lfsr13:LFSR|data_out[3]  ;
+; lfsr13:LFSR|sreg[3]                    ; Merged with lfsr13:LFSR|data_out[2]  ;
+; lfsr13:LFSR|sreg[2]                    ; Merged with lfsr13:LFSR|data_out[1]  ;
+; lfsr13:LFSR|sreg[1]                    ; Merged with lfsr13:LFSR|data_out[0]  ;
+; FSM:finitestatem|state~15              ; Lost fanout                          ;
+; FSM:finitestatem|state~16              ; Lost fanout                          ;
+; FSM:finitestatem|state~17              ; Lost fanout                          ;
+; FSM:finitestatem|state~18              ; Lost fanout                          ;
+; Total Number of Removed Registers = 16 ;                                      ;
++----------------------------------------+--------------------------------------+
 
 
 +------------------------------------------------------+
@@ -332,11 +332,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 75    ;
-; Number of registers using Synchronous Clear  ; 31    ;
+; Number of registers using Synchronous Clear  ; 21    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 52    ;
+; Number of registers using Clock Enable       ; 38    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -346,65 +346,75 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; lfsr13:comb_5|sreg[0]                  ; 2       ;
+; lfsr13:LFSR|sreg[0]                    ; 2       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |EX8_top|FSM:comb_7|Selector3 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; 3:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |EX8_top|EX8_delay:delay|count[10]   ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |EX8_top|FSM:finitestatem|Selector10 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divider_50000:comb_3 ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; max_value      ; 50000 ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_50000:divideby5000 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; max_value      ; 49999 ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divider_2500:comb_4 ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; max_value      ; 999   ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_2500:divideby2500 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; max_value      ; 999   ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: FSM:comb_7 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; BIT_SZ         ; 13    ; Signed Integer                 ;
-; IDLE           ; 0000  ; Unsigned Binary                ;
-; FIRST_LED      ; 0001  ; Unsigned Binary                ;
-; SECOND_LED     ; 0011  ; Unsigned Binary                ;
-; THIRD_LED      ; 0010  ; Unsigned Binary                ;
-; FOURTH_LED     ; 0110  ; Unsigned Binary                ;
-; FIFTH_LED      ; 0111  ; Unsigned Binary                ;
-; SIXTH_LED      ; 0101  ; Unsigned Binary                ;
-; SEVENTH_LED    ; 0100  ; Unsigned Binary                ;
-; EIGHTH_LED     ; 1100  ; Unsigned Binary                ;
-; NINTH_LED      ; 1101  ; Unsigned Binary                ;
-; TENTH_LED      ; 1111  ; Unsigned Binary                ;
-; DELAY          ; 1110  ; Unsigned Binary                ;
-; TURNOFF        ; 1010  ; Unsigned Binary                ;
-+----------------+-------+--------------------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FSM:finitestatem ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; BIT_SZ         ; 13    ; Signed Integer                       ;
+; IDLE           ; 0000  ; Unsigned Binary                      ;
+; FIRST_LED      ; 0001  ; Unsigned Binary                      ;
+; SECOND_LED     ; 0011  ; Unsigned Binary                      ;
+; THIRD_LED      ; 0010  ; Unsigned Binary                      ;
+; FOURTH_LED     ; 0110  ; Unsigned Binary                      ;
+; FIFTH_LED      ; 0111  ; Unsigned Binary                      ;
+; SIXTH_LED      ; 0101  ; Unsigned Binary                      ;
+; SEVENTH_LED    ; 0100  ; Unsigned Binary                      ;
+; EIGHTH_LED     ; 1100  ; Unsigned Binary                      ;
+; NINTH_LED      ; 1101  ; Unsigned Binary                      ;
+; TENTH_LED      ; 1111  ; Unsigned Binary                      ;
+; DELAY          ; 1110  ; Unsigned Binary                      ;
+; TURNOFF        ; 1010  ; Unsigned Binary                      ;
++----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "bin2bcd_16:bin2bcd|add3_ge5:A18" ;
++-------+-------+----------+----------------------------------+
+; Port  ; Type  ; Severity ; Details                          ;
++-------+-------+----------+----------------------------------+
+; in[3] ; Input ; Info     ; Stuck at GND                     ;
++-------+-------+----------+----------------------------------+
 
 
 +------------------------------------------------------------+
-; Port Connectivity Checks: "bin2bcd_16:comb_9|add3_ge5:A18" ;
+; Port Connectivity Checks: "bin2bcd_16:bin2bcd|add3_ge5:A9" ;
 +-------+-------+----------+---------------------------------+
 ; Port  ; Type  ; Severity ; Details                         ;
 +-------+-------+----------+---------------------------------+
@@ -412,26 +422,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+---------------------------------+
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "bin2bcd_16:comb_9|add3_ge5:A9" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; in[3] ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "bin2bcd_16:comb_9|add3_ge5:A3" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; in[3] ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
++------------------------------------------------------------+
+; Port Connectivity Checks: "bin2bcd_16:bin2bcd|add3_ge5:A3" ;
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; in[3] ; Input ; Info     ; Stuck at GND                    ;
++-------+-------+----------+---------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bin2bcd_16:comb_9"                                                                                                                           ;
+; Port Connectivity Checks: "bin2bcd_16:bin2bcd"                                                                                                                          ;
 +------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                       ;
 +------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -445,26 +446,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 75                          ;
-;     ENA               ; 31                          ;
-;     ENA SCLR          ; 21                          ;
-;     SCLR              ; 10                          ;
-;     plain             ; 13                          ;
-; arriav_lcell_comb     ; 224                         ;
+;     ENA               ; 30                          ;
+;     ENA SCLR          ; 8                           ;
+;     SCLR              ; 13                          ;
+;     plain             ; 24                          ;
+; arriav_lcell_comb     ; 234                         ;
 ;     arith             ; 59                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 58                          ;
-;     normal            ; 165                         ;
+;     normal            ; 175                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 18                          ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 96                          ;
-;         5 data inputs ; 8                           ;
-;         6 data inputs ; 18                          ;
+;         1 data inputs ; 19                          ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 98                          ;
+;         5 data inputs ; 9                           ;
+;         6 data inputs ; 20                          ;
 ; boundary_port         ; 50                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 5.65                        ;
+; Average LUT depth     ; 5.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -473,7 +474,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -483,89 +484,77 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Fri Dec 09 18:00:12 2016
+    Info: Processing started: Mon Dec 12 11:45:31 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EX8_top -c EX8_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file hex_to_7seg.v
-    Info (12023): Found entity 1: hex_to_7seg File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/hex_to_7seg.v Line: 1
+    Info (12023): Found entity 1: hex_to_7seg File: C:/EE2-Verilog-Lab/Part_2/EX8/hex_to_7seg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fsm.v
-    Info (12023): Found entity 1: FSM File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/FSM.v Line: 1
+    Info (12023): Found entity 1: FSM File: C:/EE2-Verilog-Lab/Part_2/EX8/FSM.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ex8_top.v
-    Info (12023): Found entity 1: EX8_top File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 1
+    Info (12023): Found entity 1: EX8_top File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file divider_50000.v
-    Info (12023): Found entity 1: divider_50000 File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/divider_50000.v Line: 2
+    Info (12023): Found entity 1: divider_50000 File: C:/EE2-Verilog-Lab/Part_2/EX8/divider_50000.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file divider_2500.v
-    Info (12023): Found entity 1: divider_2500 File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/divider_2500.v Line: 2
+    Info (12023): Found entity 1: divider_2500 File: C:/EE2-Verilog-Lab/Part_2/EX8/divider_2500.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file delay.v
-    Info (12023): Found entity 1: EX8_delay File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/delay.v Line: 1
+    Info (12023): Found entity 1: EX8_delay File: C:/EE2-Verilog-Lab/Part_2/EX8/delay.v Line: 1
 Warning (12019): Can't analyze file -- file dec_to_7seg.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file lfsr.v
-    Info (12023): Found entity 1: lfsr13 File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/LFSR.v Line: 2
+    Info (12023): Found entity 1: lfsr13 File: C:/EE2-Verilog-Lab/Part_2/EX8/LFSR.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file b_to_bcd.v
-    Info (12023): Found entity 1: bin2bcd_16 File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/b_to_bcd.v Line: 12
+    Info (12023): Found entity 1: bin2bcd_16 File: C:/EE2-Verilog-Lab/Part_2/EX8/b_to_bcd.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file add3_ge5.v
-    Info (12023): Found entity 1: add3_ge5 File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/add3_ge5.v Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at EX8_top.v(12): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 12
-Critical Warning (10846): Verilog HDL Instantiation warning at EX8_top.v(13): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 13
-Critical Warning (10846): Verilog HDL Instantiation warning at EX8_top.v(15): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 15
-Critical Warning (10846): Verilog HDL Instantiation warning at EX8_top.v(17): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 17
-Critical Warning (10846): Verilog HDL Instantiation warning at EX8_top.v(19): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 19
-Critical Warning (10846): Verilog HDL Instantiation warning at EX8_top.v(21): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 21
-Critical Warning (10846): Verilog HDL Instantiation warning at EX8_top.v(23): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 23
-Critical Warning (10846): Verilog HDL Instantiation warning at EX8_top.v(24): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 24
-Critical Warning (10846): Verilog HDL Instantiation warning at EX8_top.v(25): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 25
-Critical Warning (10846): Verilog HDL Instantiation warning at EX8_top.v(26): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 26
-Critical Warning (10846): Verilog HDL Instantiation warning at EX8_top.v(27): instance has no name File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 27
+    Info (12023): Found entity 1: add3_ge5 File: C:/EE2-Verilog-Lab/Part_2/EX8/add3_ge5.v Line: 1
 Info (12127): Elaborating entity "EX8_top" for the top level hierarchy
-Info (12128): Elaborating entity "divider_50000" for hierarchy "divider_50000:comb_3" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 12
-Warning (10230): Verilog HDL assignment warning at divider_50000.v(14): truncated value with size 32 to match size of target (16) File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/divider_50000.v Line: 14
-Info (12128): Elaborating entity "divider_2500" for hierarchy "divider_2500:comb_4" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 13
-Warning (10230): Verilog HDL assignment warning at divider_2500.v(16): truncated value with size 32 to match size of target (16) File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/divider_2500.v Line: 16
-Info (12128): Elaborating entity "lfsr13" for hierarchy "lfsr13:comb_5" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 15
-Warning (10036): Verilog HDL or VHDL warning at LFSR.v(5): object "first" assigned a value but never read File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/LFSR.v Line: 5
-Info (12128): Elaborating entity "EX8_delay" for hierarchy "EX8_delay:comb_6" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 17
-Warning (10230): Verilog HDL assignment warning at delay.v(17): truncated value with size 32 to match size of target (13) File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/delay.v Line: 17
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:comb_7" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 19
-Warning (10240): Verilog HDL Always Construct warning at FSM.v(50): inferring latch(es) for variable "en_lfsr", which holds its previous value in one or more paths through the always construct File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/FSM.v Line: 50
-Warning (10240): Verilog HDL Always Construct warning at FSM.v(50): inferring latch(es) for variable "start_delay", which holds its previous value in one or more paths through the always construct File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/FSM.v Line: 50
-Info (10041): Inferred latch for "start_delay" at FSM.v(50) File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/FSM.v Line: 50
-Info (10041): Inferred latch for "en_lfsr" at FSM.v(50) File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/FSM.v Line: 50
-Info (12128): Elaborating entity "bin2bcd_16" for hierarchy "bin2bcd_16:comb_9" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 21
-Info (12128): Elaborating entity "add3_ge5" for hierarchy "bin2bcd_16:comb_9|add3_ge5:A1" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/b_to_bcd.v Line: 26
-Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:comb_10" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 23
+Info (12128): Elaborating entity "divider_50000" for hierarchy "divider_50000:divideby5000" File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 12
+Warning (10230): Verilog HDL assignment warning at divider_50000.v(15): truncated value with size 32 to match size of target (16) File: C:/EE2-Verilog-Lab/Part_2/EX8/divider_50000.v Line: 15
+Info (12128): Elaborating entity "divider_2500" for hierarchy "divider_2500:divideby2500" File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 13
+Warning (10230): Verilog HDL assignment warning at divider_2500.v(17): truncated value with size 32 to match size of target (16) File: C:/EE2-Verilog-Lab/Part_2/EX8/divider_2500.v Line: 17
+Info (12128): Elaborating entity "lfsr13" for hierarchy "lfsr13:LFSR" File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 15
+Info (12128): Elaborating entity "EX8_delay" for hierarchy "EX8_delay:delay" File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 17
+Warning (10230): Verilog HDL assignment warning at delay.v(20): truncated value with size 32 to match size of target (13) File: C:/EE2-Verilog-Lab/Part_2/EX8/delay.v Line: 20
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:finitestatem" File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 19
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(51): inferring latch(es) for variable "en_lfsr", which holds its previous value in one or more paths through the always construct File: C:/EE2-Verilog-Lab/Part_2/EX8/FSM.v Line: 51
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(51): inferring latch(es) for variable "start_delay", which holds its previous value in one or more paths through the always construct File: C:/EE2-Verilog-Lab/Part_2/EX8/FSM.v Line: 51
+Info (10041): Inferred latch for "start_delay" at FSM.v(51) File: C:/EE2-Verilog-Lab/Part_2/EX8/FSM.v Line: 51
+Info (10041): Inferred latch for "en_lfsr" at FSM.v(51) File: C:/EE2-Verilog-Lab/Part_2/EX8/FSM.v Line: 51
+Info (12128): Elaborating entity "bin2bcd_16" for hierarchy "bin2bcd_16:bin2bcd" File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 21
+Info (12128): Elaborating entity "add3_ge5" for hierarchy "bin2bcd_16:bin2bcd|add3_ge5:A1" File: C:/EE2-Verilog-Lab/Part_2/EX8/b_to_bcd.v Line: 26
+Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:seg0" File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 23
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch FSM:comb_7|en_lfsr has unsafe behavior File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/FSM.v Line: 5
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FSM:comb_7|state.NINTH_LED File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/FSM.v Line: 12
-Warning (13012): Latch FSM:comb_7|start_delay has unsafe behavior File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/FSM.v Line: 5
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FSM:comb_7|state.DELAY File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/FSM.v Line: 12
+Warning (13012): Latch FSM:finitestatem|en_lfsr has unsafe behavior File: C:/EE2-Verilog-Lab/Part_2/EX8/FSM.v Line: 5
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FSM:finitestatem|state.NINTH_LED File: C:/EE2-Verilog-Lab/Part_2/EX8/FSM.v Line: 12
+Warning (13012): Latch FSM:finitestatem|start_delay has unsafe behavior File: C:/EE2-Verilog-Lab/Part_2/EX8/FSM.v Line: 5
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FSM:finitestatem|state.TURNOFF File: C:/EE2-Verilog-Lab/Part_2/EX8/FSM.v Line: 12
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 5
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 5
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 5
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 5
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 5
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.map.smsg
+Info (144001): Generated suppressed messages file C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[0]" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 3
-    Warning (15610): No output dependent on input pin "KEY[1]" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 3
-    Warning (15610): No output dependent on input pin "KEY[2]" File: //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.v Line: 3
-Info (21057): Implemented 279 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 3
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 3
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.v Line: 3
+Info (21057): Implemented 287 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 229 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 905 megabytes
-    Info: Processing ended: Fri Dec 09 18:00:25 2016
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:21
+    Info (21061): Implemented 237 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 899 megabytes
+    Info: Processing ended: Mon Dec 12 11:45:42 2016
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in //icnas2.cc.ic.ac.uk/dm2515/Digital 2/Part_2/EX8/EX8_top.map.smsg.
+The suppressed messages can be found in C:/EE2-Verilog-Lab/Part_2/EX8/EX8_top.map.smsg.
 
 

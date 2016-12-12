@@ -1,5 +1,5 @@
 
-State Machine - |EX8_top|FSM:comb_7|state
+State Machine - |EX8_top|FSM:finitestatem|state
 Name state.TENTH_LED state.DELAY state.NINTH_LED state.EIGHTH_LED state.TURNOFF state.FIFTH_LED state.FOURTH_LED state.SIXTH_LED state.SEVENTH_LED state.SECOND_LED state.THIRD_LED state.FIRST_LED state.IDLE 
 state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 
 state.FIRST_LED 0 0 0 0 0 0 0 0 0 0 0 1 1 

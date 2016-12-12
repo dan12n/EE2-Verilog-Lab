@@ -2,196 +2,196 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'divider_50000:comb_3|out_clk'
-Slack : -3.923
-TNS   : -110.773
+Type  : Slow 1100mV 85C Model Setup 'divider_50000:divideby5000|out_clk'
+Slack : -3.949
+TNS   : -113.773
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.981
-TNS   : -86.219
+Slack : -3.168
+TNS   : -77.111
 
-Type  : Slow 1100mV 85C Model Setup 'FSM:comb_7|state.FIRST_LED'
-Slack : -2.769
-TNS   : -2.769
+Type  : Slow 1100mV 85C Model Setup 'FSM:finitestatem|state.FIRST_LED'
+Slack : -2.762
+TNS   : -2.762
 
-Type  : Slow 1100mV 85C Model Setup 'FSM:comb_7|state.DELAY'
-Slack : -2.673
-TNS   : -2.673
+Type  : Slow 1100mV 85C Model Setup 'FSM:finitestatem|state.DELAY'
+Slack : -1.652
+TNS   : -1.652
 
-Type  : Slow 1100mV 85C Model Hold 'divider_50000:comb_3|out_clk'
-Slack : 0.017
+Type  : Slow 1100mV 85C Model Hold 'divider_50000:divideby5000|out_clk'
+Slack : 0.290
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.366
+Slack : 0.384
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'FSM:comb_7|state.FIRST_LED'
-Slack : 0.807
+Type  : Slow 1100mV 85C Model Hold 'FSM:finitestatem|state.DELAY'
+Slack : 0.441
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'FSM:comb_7|state.DELAY'
-Slack : 1.140
+Type  : Slow 1100mV 85C Model Hold 'FSM:finitestatem|state.FIRST_LED'
+Slack : 0.938
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.634
-TNS   : -26.016
+Slack : -0.638
+TNS   : -26.139
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divider_50000:comb_3|out_clk'
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divider_50000:divideby5000|out_clk'
 Slack : -0.394
-TNS   : -23.354
+TNS   : -24.788
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FSM:comb_7|state.DELAY'
-Slack : 0.378
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FSM:finitestatem|state.FIRST_LED'
+Slack : 0.363
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FSM:comb_7|state.FIRST_LED'
-Slack : 0.430
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FSM:finitestatem|state.DELAY'
+Slack : 0.443
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'divider_50000:comb_3|out_clk'
-Slack : -4.003
-TNS   : -111.364
-
-Type  : Slow 1100mV 0C Model Setup 'FSM:comb_7|state.FIRST_LED'
-Slack : -2.739
-TNS   : -2.739
+Type  : Slow 1100mV 0C Model Setup 'divider_50000:divideby5000|out_clk'
+Slack : -4.022
+TNS   : -114.658
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.609
-TNS   : -80.704
+Slack : -2.787
+TNS   : -71.158
 
-Type  : Slow 1100mV 0C Model Setup 'FSM:comb_7|state.DELAY'
-Slack : -2.563
-TNS   : -2.563
+Type  : Slow 1100mV 0C Model Setup 'FSM:finitestatem|state.FIRST_LED'
+Slack : -2.624
+TNS   : -2.624
 
-Type  : Slow 1100mV 0C Model Hold 'divider_50000:comb_3|out_clk'
-Slack : 0.061
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Setup 'FSM:finitestatem|state.DELAY'
+Slack : -1.528
+TNS   : -1.528
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.074
+Slack : -0.032
+TNS   : -0.440
+
+Type  : Slow 1100mV 0C Model Hold 'divider_50000:divideby5000|out_clk'
+Slack : 0.287
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'FSM:comb_7|state.FIRST_LED'
-Slack : 0.687
+Type  : Slow 1100mV 0C Model Hold 'FSM:finitestatem|state.DELAY'
+Slack : 0.295
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'FSM:comb_7|state.DELAY'
-Slack : 1.003
+Type  : Slow 1100mV 0C Model Hold 'FSM:finitestatem|state.FIRST_LED'
+Slack : 0.845
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.691
-TNS   : -23.964
+Slack : -0.712
+TNS   : -23.902
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'divider_50000:comb_3|out_clk'
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'divider_50000:divideby5000|out_clk'
 Slack : -0.394
-TNS   : -23.359
+TNS   : -24.898
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FSM:comb_7|state.DELAY'
-Slack : 0.407
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FSM:finitestatem|state.FIRST_LED'
+Slack : 0.393
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FSM:comb_7|state.FIRST_LED'
-Slack : 0.409
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FSM:finitestatem|state.DELAY'
+Slack : 0.404
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.555
-TNS   : -55.527
+Slack : -2.707
+TNS   : -48.507
 
-Type  : Fast 1100mV 85C Model Setup 'divider_50000:comb_3|out_clk'
-Slack : -2.025
-TNS   : -53.400
+Type  : Fast 1100mV 85C Model Setup 'divider_50000:divideby5000|out_clk'
+Slack : -1.931
+TNS   : -54.237
 
-Type  : Fast 1100mV 85C Model Setup 'FSM:comb_7|state.DELAY'
-Slack : -1.505
-TNS   : -1.505
+Type  : Fast 1100mV 85C Model Setup 'FSM:finitestatem|state.FIRST_LED'
+Slack : -1.436
+TNS   : -1.436
 
-Type  : Fast 1100mV 85C Model Setup 'FSM:comb_7|state.FIRST_LED'
-Slack : -1.373
-TNS   : -1.373
+Type  : Fast 1100mV 85C Model Setup 'FSM:finitestatem|state.DELAY'
+Slack : -0.790
+TNS   : -0.790
 
-Type  : Fast 1100mV 85C Model Hold 'divider_50000:comb_3|out_clk'
-Slack : -0.107
-TNS   : -0.107
+Type  : Fast 1100mV 85C Model Hold 'divider_50000:divideby5000|out_clk'
+Slack : 0.098
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.197
+Slack : 0.219
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'FSM:comb_7|state.FIRST_LED'
-Slack : 0.513
+Type  : Fast 1100mV 85C Model Hold 'FSM:finitestatem|state.DELAY'
+Slack : 0.336
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'FSM:comb_7|state.DELAY'
-Slack : 0.919
+Type  : Fast 1100mV 85C Model Hold 'FSM:finitestatem|state.FIRST_LED'
+Slack : 0.576
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.763
-TNS   : -18.089
+Slack : -0.786
+TNS   : -18.285
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'divider_50000:comb_3|out_clk'
-Slack : 0.039
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'divider_50000:divideby5000|out_clk'
+Slack : -0.006
+TNS   : -0.057
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FSM:finitestatem|state.FIRST_LED'
+Slack : 0.418
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FSM:comb_7|state.DELAY'
-Slack : 0.436
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FSM:comb_7|state.FIRST_LED'
-Slack : 0.491
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FSM:finitestatem|state.DELAY'
+Slack : 0.458
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.043
-TNS   : -44.834
+Slack : -2.168
+TNS   : -38.607
 
-Type  : Fast 1100mV 0C Model Setup 'divider_50000:comb_3|out_clk'
-Slack : -1.796
-TNS   : -49.211
+Type  : Fast 1100mV 0C Model Setup 'divider_50000:divideby5000|out_clk'
+Slack : -1.821
+TNS   : -50.029
 
-Type  : Fast 1100mV 0C Model Setup 'FSM:comb_7|state.DELAY'
-Slack : -1.311
-TNS   : -1.311
+Type  : Fast 1100mV 0C Model Setup 'FSM:finitestatem|state.FIRST_LED'
+Slack : -1.279
+TNS   : -1.279
 
-Type  : Fast 1100mV 0C Model Setup 'FSM:comb_7|state.FIRST_LED'
-Slack : -1.258
-TNS   : -1.258
+Type  : Fast 1100mV 0C Model Setup 'FSM:finitestatem|state.DELAY'
+Slack : -0.681
+TNS   : -0.681
 
-Type  : Fast 1100mV 0C Model Hold 'divider_50000:comb_3|out_clk'
-Slack : -0.109
-TNS   : -0.109
+Type  : Fast 1100mV 0C Model Hold 'divider_50000:divideby5000|out_clk'
+Slack : 0.078
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.187
+Slack : 0.135
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'FSM:comb_7|state.FIRST_LED'
-Slack : 0.444
+Type  : Fast 1100mV 0C Model Hold 'FSM:finitestatem|state.DELAY'
+Slack : 0.270
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'FSM:comb_7|state.DELAY'
-Slack : 0.800
+Type  : Fast 1100mV 0C Model Hold 'FSM:finitestatem|state.FIRST_LED'
+Slack : 0.518
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.814
-TNS   : -21.598
+Slack : -0.842
+TNS   : -21.792
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'divider_50000:comb_3|out_clk'
-Slack : 0.061
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'divider_50000:divideby5000|out_clk'
+Slack : 0.026
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FSM:comb_7|state.DELAY'
-Slack : 0.445
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FSM:finitestatem|state.FIRST_LED'
+Slack : 0.432
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FSM:comb_7|state.FIRST_LED'
-Slack : 0.491
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FSM:finitestatem|state.DELAY'
+Slack : 0.475
 TNS   : 0.000
 
 ------------------------------------------------------------

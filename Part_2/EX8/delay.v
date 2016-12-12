@@ -18,10 +18,11 @@ module EX8_delay (N, clk, trigger, time_out);
 
 			else 				
 				count <= count + 1;
-									end
+											end
 
 		else						begin
 			time_out <= 0;
 			count <= 13'd0;
 										end
+												end
 endmodule

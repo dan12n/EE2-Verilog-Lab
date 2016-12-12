@@ -10,13 +10,13 @@ SW[7] => SW[7].IN1
 SW[8] => SW[8].IN1
 SW[9] => SW[9].IN1
 CLOCK_50 => CLOCK_50.IN2
-DAC_CS <= spi2dac:comb_4.port4
-DAC_SDI <= spi2dac:comb_4.port3
-DAC_LD <= spi2dac:comb_4.port6
-DAC_SCk <= spi2dac:comb_4.port5
+DAC_CS <= spi2dac:dac.port4
+DAC_SDI <= spi2dac:dac.port3
+DAC_LD <= spi2dac:dac.port6
+DAC_SCK <= spi2dac:dac.port5
 
 
-|ex10_top|divider_50000:comb_3
+|ex10_top|divider_5000:divideby5000
 clk => count[0].CLK
 clk => count[1].CLK
 clk => count[2].CLK
@@ -37,7 +37,7 @@ clk => out_clk~reg0.CLK
 out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ex10_top|spi2dac:comb_4
+|ex10_top|spi2dac:dac
 sysclk => clk_1MHz.CLK
 sysclk => ctr[0].CLK
 sysclk => ctr[1].CLK

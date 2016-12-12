@@ -1,17 +1,19 @@
-Analysis & Synthesis Status : Successful - Tue Nov 29 10:47:48 2016
-Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Analysis & Synthesis Status : Successful - Mon Dec 12 10:16:20 2016
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : EX11_top
 Top-level Entity Name : ex11_top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 45
-Total pins : 15
+Total registers : 66
+Total pins : 16
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
+Total HSSI PMA RX ATT Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
+Total HSSI PMA TX ATT Serializers : 0
 Total PLLs : 0
 Total DLLs : 0

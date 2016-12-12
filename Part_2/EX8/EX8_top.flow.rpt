@@ -1,5 +1,5 @@
 Flow report for EX8_top
-Fri Dec 09 18:01:38 2016
+Mon Dec 12 11:46:33 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -41,14 +41,14 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Fri Dec 09 18:01:38 2016           ;
+; Flow Status                     ; Successful - Mon Dec 12 11:46:33 2016           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; EX8_top                                         ;
 ; Top-level Entity Name           ; EX8_top                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 114 / 32,070 ( < 1 % )                          ;
+; Logic utilization (in ALMs)     ; 118 / 32,070 ( < 1 % )                          ;
 ; Total registers                 ; 80                                              ;
 ; Total pins                      ; 50 / 457 ( 11 % )                               ;
 ; Total virtual pins              ; 0                                               ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/09/2016 18:00:13 ;
+; Start date & time ; 12/12/2016 11:45:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; EX8_top             ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 260248564297093.148130641308728       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 260248564268247.148154313208404       ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -97,12 +97,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 905 MB              ; 00:00:21                           ;
-; Fitter                    ; 00:00:35     ; 1.0                     ; 2635 MB             ; 00:01:02                           ;
-; Assembler                 ; 00:00:11     ; 1.0                     ; 900 MB              ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:10     ; 1.1                     ; 1217 MB             ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 811 MB              ; 00:00:02                           ;
-; Total                     ; 00:01:10     ; --                      ; --                  ; 00:01:39                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 899 MB              ; 00:00:23                           ;
+; Fitter                    ; 00:00:33     ; 1.0                     ; 2602 MB             ; 00:00:59                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 889 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 1210 MB             ; 00:00:06                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 810 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:57     ; --                      ; --                  ; 00:01:35                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,11 +111,11 @@ agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; eews104a-008     ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; eews104a-008     ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; eews104a-008     ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; eews104a-008     ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; eews104a-008     ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; eews104a-011     ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; eews104a-011     ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; eews104a-011     ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; eews104a-011     ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer        ; eews104a-011     ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
