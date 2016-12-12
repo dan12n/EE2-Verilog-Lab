@@ -14,3 +14,5 @@ For the extension of this exercise, we needed to add a clock divider as the curr
 
 ##Results and Conclusion:
 
+The counter worked as expected with the display representing the value of the 16 bit counter. The results for the maximum frequencies at different temperatures are as seen above with a lower frequency at the lower temperature. The problems seen with the timinhg analysis were potential unconstrained ports or paths for the outputs and inputs, and this could be a problem as setup or hold times could be violated which could lead to a potetnial metasatable state.
+
