@@ -10,4 +10,6 @@ Exercise 12 brought the idea of ROM for the first time and we were tasked with c
 
 For the next exercise, the switches were replaced by a counter that goes through the addresses in the ROM. The ROM contains one cycle of a sinewave and so using the counter, and using both methods seen in exercise 10 and 11, we should get a perfect sinewave being generated.
 
-Penultimately, 
+Penultimately, we had to adapt the previous exercise so that the sinewave generated is no longer of a fixed frequency, but of a variable one as specified by the input switches on the FPGA.
+
+Finally, exercise 15 is where we convert analogue voltages to their digital equivalent using the provided spi2adc module and the potentiometer on the add on card.
