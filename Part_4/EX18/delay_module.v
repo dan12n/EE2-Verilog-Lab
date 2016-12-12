@@ -24,8 +24,6 @@ module processor (sysclk, data_in, data_out, wrreq, tick_10k, pulse);
 
 	assign x[9:0] = data_in[9:0] - ADC_OFFSET;		// x is input in 2's complement
 	
-//	d_register(full, tick_10k, d_full);
-	
 	FIFO(sysclk, y[9:0], (d_full&pulse), pulse, full, q[9:0]);
 	
 	d_register(full, 1'b1, d_full);
